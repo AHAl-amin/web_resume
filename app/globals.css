@@ -1,0 +1,111 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+
+  --foreground: #ffffff;
+}
+
+@theme {
+  --font-roboto: var(--font-roboto-flex);
+  --font-abril: var(--font-abril-fatface);
+  --font-marck: var(--font-marck-script);
+
+}
+
+body {
+
+  color: var(--foreground);
+  font-family: var(--font-roboto-flex);
+
+}
+
+@layer utilities {
+  .btn-gradient-border {
+    border: 1px solid transparent;
+    background:
+      linear-gradient(to right, #0A427D, #06294D00, #0A427D) padding-box,
+      linear-gradient(to right, #0D5D69, #3190F5) border-box;
+  }
+
+  /* Word spacing utilities for justified text */
+  .word-spacing-tight {
+    word-spacing: -0.05em;
+  }
+
+  .word-spacing-normal {
+    word-spacing: 0;
+  }
+
+  .word-spacing-relaxed {
+    word-spacing: 0.05em;
+  }
+
+  /* Controlled justify - prevents last line stretching */
+  .text-justify-controlled {
+    text-align: justify;
+    text-align-last: left;
+  }
+
+  /* Marquee carousel animation */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+}
+
+.marck-script {
+  font-family: var(--font-marck-script);
+}
+
+.abril-fatface {
+  font-family: var(--font-abril-fatface);
+}
+
+@theme inline {
+
+  --animate-marquee: marquee var(--duration) infinite linear;
+
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+
+  @keyframes border-beam {
+    100% {
+      offset-distance: 100%;
+    }
+  }
+}
