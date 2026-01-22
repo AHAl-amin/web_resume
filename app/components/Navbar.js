@@ -105,7 +105,7 @@ export default function Navbar() {
                             duration={6}
                             delay={3}
                             size={400}
-                             anchor="left"
+                            anchor="left"
                             borderWidth={2}
                             className="from-transparent via-blue-500 to-transparent"
                         />
