@@ -10,6 +10,7 @@ import { useState } from "react";
 import { BorderBeam } from "@/components/ui/border-beam";
 
 
+
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -57,14 +58,9 @@ export default function Navbar() {
                             <MdArrowOutward className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                         </span>
 
-        <BorderBeam
-        duration={6}
-        delay={3}
-        size={400}
-        anchor="left"
-        borderWidth={2}
-        className="from-transparent to-transparent"
-      />
+   
+
+      <BorderBeam duration={8} size={100} colorFrom="#41A1EF" colorTo="#0A427D" anchor="left" />
                     </button>
                 </div>
 
@@ -95,20 +91,13 @@ export default function Navbar() {
                         ))}
                     </ul>
 
-                      <button className="relative mt-3 flex items-center gap-2 px-8 py-2.5 rounded-full bg-gradient-to-r from-[#0A427D]/40 via-transparent to-[#0A427D]/40 text-white font-medium text-sm overflow-hidden border border-white/10 cursor-pointer group">
+                      <button className="relative mt-3 flex items-center gap-2 px-8 py-2.5 rounded-full bg-linear-to-r from-[#0A427D]/40 via-transparent to-[#0A427D]/40 text-white font-medium text-sm overflow-hidden border border-white/10 cursor-pointer group">
                         <span className="relative z-10 flex items-center gap-2">
                             Hire Me
                             <MdArrowOutward className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                         </span>
 
-                        <BorderBeam
-                            duration={6}
-                            delay={3}
-                            size={400}
-                            anchor="left"
-                            borderWidth={2}
-                            className="from-transparent via-blue-500 to-transparent"
-                        />
+                      <BorderBeam duration={8} size={100} colorFrom="#41A1EF" colorTo="#0A427D" anchor='left' />
                     </button>
                 </div>
             </div>

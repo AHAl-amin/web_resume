@@ -21,10 +21,10 @@ export default function Skills() {
         <section className="w-full max-w-[1440px] mx-auto px-6 md:px-10 py-20 border-t border-white/5">
             {/* Header */}
             <div className="flex flex-col lg:flex-row justify-between items-start gap-10 mb-16">
-                <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-bold text-white abril-fatface max-w-xl leading-tight">
+                <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-bold text-white  max-w-2xl leading-tight">
                     Delivering Value Through My Skills
                 </h2>
-                <p className="text-white/50 text-base md:text-lg max-w-md lg:text-right">
+                <p className="text-white/50 text-base md:text-lg max-w-lg  text-start">
                     Offline support for things which we used to spend on with 50-70 hours a month easily, is now possible with our industry.
                 </p>
             </div>
@@ -34,7 +34,7 @@ export default function Skills() {
                 {services.map((service, index) => (
                     <div
                         key={index}
-                        className="group py-10 md:py-12 border-b border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 transition-all hover:bg-white/2 px-6 rounded-2xl"
+                        className={`group py-8  border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 transition-all hover:bg-white/2  rounded-2xl ${index === 0 ? "border-b border-white/10" : "" || index === 1 ? "border-b border-white/10" : ""}`}
                     >
                         <div className="flex-1">
                             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-[#79B7FA] transition-colors">
@@ -44,9 +44,14 @@ export default function Skills() {
                                 {service.desc}
                             </p>
                         </div>
-                        <div className="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition-all duration-500 bg-white/5 text-white/40 group-hover:bg-[#79B7FA] group-hover:text-black">
-                            <FiArrowUpRight className="text-2xl" />
+                        <div className="p-[1px] rounded-full bg-linear-to-r from-[#5A78EE] to-[#0CA8B6] transition-all duration-500 group-hover:from-[#0CA8B6] group-hover:to-[#5A78EE]">
+                            <div className="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center
+      group-hover:bg-linear-to-br group-hover:from-[#0A427D]/50 group-hover:to-[#3456DC]/50 bg-black
+      text-white/60 group-hover:text-white transition-all duration-500 cursor-pointer">
+                                <FiArrowUpRight className="text-2xl" />
+                            </div>
                         </div>
+
                     </div>
                 ))}
             </div>

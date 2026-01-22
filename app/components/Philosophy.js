@@ -1,33 +1,52 @@
 "use client";
+import { BorderBeam } from "@/components/ui/border-beam";
 import { FiArrowRight } from "react-icons/fi";
+import { MdArrowOutward } from "react-icons/md";
 
 export default function Philosophy() {
     return (
-        <section className="w-full max-w-[1440px] mx-auto px-6 md:px-10 py-24 md:py-32 border-t border-white/5">
-            <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-12">
-                <div className="max-w-3xl">
-                    <h2 className="text-[36px] md:text-[56px] lg:text-[72px] font-bold text-white abril-fatface leading-tight mb-12">
+        <section className="w-full max-w-[1440px] mx-auto px-10  border-t border-white/5">
+            <div className="flex flex-col lg:flex-row justify-between  gap-12">
+                <div className="lg:w-1/2 w-full">
+                    <h2 className="text-[26px] md:text-[36px] lg:text-[44px] font-bold text-white leading-tight mb-12">
                         The Approach to Design and Philosophy Behind It
                     </h2>
 
-                    <button className="group bg-[#79B7FA] text-black px-10 py-5 rounded-full font-bold text-lg md:text-xl flex items-center gap-3 hover:bg-white transition-all duration-500">
-                        Let&apos;s Talk
-                        <div className="w-8 h-8 bg-black/10 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-transform">
-                            <FiArrowRight />
-                        </div>
-                    </button>
                 </div>
+                <div className="flex justify-between  items-center lg:w-1/2 w-full">
+                    <div>
 
-                <div className="flex flex-col gap-6 items-start lg:items-end">
-                    <a href="#" className="text-white/40 text-xl md:text-2xl hover:text-white transition-colors">
-                        Graphic Design
-                    </a>
-                    <a href="#" className="text-white/40 text-xl md:text-2xl hover:text-white transition-colors">
-                        Brand Identity Design
-                    </a>
-                    <a href="#" className="text-[#79B7FA] text-xl md:text-2xl font-bold hover:text-white transition-all">
-                        Product Designer
-                    </a>
+
+                        <button className="relative mt-3 flex items-center gap-2 px-8 py-4 rounded-full bg-linear-to-r from-[#0A427D]/40 via-transparent to-[#0A427D]/40 text-white font-medium text-sm overflow-hidden border border-white/10 cursor-pointer group">
+                            <span className="relative z-10 flex items-center gap-2">
+                                Let&apos;s Talk
+                                <FiArrowRight className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                            </span>
+
+                            <BorderBeam
+                                duration={6}
+                                delay={3}
+                                size={400}
+                                anchor="left"
+                                borderWidth={2}
+                                className=""
+                                colorFrom="#41A1EF" colorTo="#0A427D"
+                            />
+                        </button>
+                    </div>
+
+
+                    <div className="flex flex-col gap-3 items-start text-[#CAD5E2] ">
+                        <a href="#" className=" text-xl md:text-xl hover:text-white transition-colors">
+                            Creative Design
+                        </a>
+                        <a href="#" className=" text-xl md:text-xl hover:text-white transition-colors">
+                            User Friendly Design
+                        </a>
+                        <a href="#" className="text-xl md:text-xl font-bold hover:text-white transition-all">
+                            Masterful Execution
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>

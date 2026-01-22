@@ -1,6 +1,7 @@
 "use client";
 import { FaFigma } from "react-icons/fa";
 import { SiAdobexd, SiAdobephotoshop, SiAdobeillustrator } from "react-icons/si";
+import toolsBanner from "@/public/images/tollsbanner.png";
 
 export default function Toolbox() {
     const tools = [
@@ -31,55 +32,61 @@ export default function Toolbox() {
     ];
 
     return (
-        <section className="relative w-full max-w-[1440px] mx-auto px-6 md:px-10 py-20 overflow-hidden">
+        <section className="relative w-full max-w-[1440px] mx-auto px-6 md:px-10 py-30  ">
             {/* Background Glow */}
-            <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#79B7FA]/10 blur-[150px] rounded-full pointer-events-none"></div>
+            {/* <div className={`absolute top-0 left-0 w-full h-full bg-[url(${toolsBanner.src})] bg-cover bg-center`} >
+            </div> */}
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-10">
+            <div
+                className="absolute inset-0 bg-cover bg-center -z-10"
+                style={{ backgroundImage: `url(${toolsBanner.src})` }}
+            ></div>
+
+
+            <div className="flex lg:flex-row flex-col justify-between items-start gap-16 lg:gap-0  relative z-10">
                 {/* Left Side: Globe Visual */}
-                <div className="lg:col-span-5 relative">
-                    <div className="relative w-full aspect-square max-w-[450px] mx-auto">
-                        {/* Concentric circles for globe effect */}
-                        <div className="absolute inset-0 rounded-full border border-white/5 animate-pulse"></div>
-                        <div className="absolute inset-8 rounded-full border border-[#79B7FA]/10"></div>
-                        <div className="absolute inset-16 rounded-full bg-linear-to-br from-[#035AB7]/20 to-[#072340]/40 overflow-hidden flex items-center justify-center">
-                            <div className="text-center px-8">
-                                <h3 className="text-white/40 text-xs uppercase tracking-[0.3em] font-medium mb-3">Tech Stack</h3>
-                                <h2 className="text-white text-[28px] md:text-[36px] font-bold leading-tight abril-fatface">
-                                    My Creative <br /> Toolbox
-                                </h2>
-                            </div>
-                        </div>
+                <div className="flex flex-col items-center lg:w-1/2 w-full">
+                    <div className="text-end  px-8  ">
+                        <h3 className="bg-linear-to-r from-[#44E1EF] to-[#549DEA] bg-clip-text text-transparent text-[24px]  font-medium mb-3">Tools & Skills</h3>
+                        <h2 className="text-white text text-[28px] md:text-[64px] font-bold leading-tight ">
+                            My Creative <br /> Toolbox
+                        </h2>
                     </div>
                 </div>
 
                 {/* Right Side: Tool Cards */}
-                <div className="lg:col-span-7 flex flex-col gap-5">
+                <div className=" flex flex-col gap-5 lg:w-1/2 w-full">
                     {tools.map((tool, index) => (
                         <div
                             key={index}
-                            className="bg-[#111111]/50 backdrop-blur-xl border border-white/5 p-6 rounded-[24px] flex items-center gap-6 group hover:border-[#79B7FA]/30 transition-all duration-500"
+                            className="bg-[#111111]/50 backdrop-blur-xl border border-[#0A427D] p-6 rounded-[24px] flex  gap-6 group hover:border-[#0A427D]/30 transition-all duration-500"
                         >
                             <div className="w-14 h-14 shrink-0 bg-white/5 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
                                 {tool.icon}
                             </div>
-                            <div className="grow">
+                            <div className="w-full flex flex-col gap-2 ">
                                 <div className="flex justify-between items-end mb-2">
                                     <h4 className="text-white text-lg md:text-xl font-bold">{tool.name}</h4>
-                                    <span className="text-white/40 text-sm">{tool.level}</span>
+
                                 </div>
                                 <p className="text-white/50 text-sm mb-3">{tool.desc}</p>
-                                <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-                                    <div
-                                        className="h-full bg-linear-to-r from-[#79B7FA] to-[#035AB7] rounded-full transition-all duration-1000"
-                                        style={{ width: tool.level }}
-                                    ></div>
+                                <div className="flex justify-between items-center mb-2 relative ">
+                                    <div className="h-1.5 w-full  rounded-full overflow-hidden">
+
+                                        <div
+                                            className="h-full bg-linear-to-r from-[#79B7FA] to-[#035AB7] rounded-full transition-all duration-1000"
+                                            style={{ width: tool.level }}
+                                        ></div>
+
+                                    </div>
+                                    <span className={`text-white text-sm absolute bg-[#035AB7] px-2 rounded-full  ${index === 0 ? "right-10" : "" || index === 1 ? "right-20" : "" || index === 2 ? "right-30" : "" || index === 3 ? "right-40" : ""}`}>{tool.level}</span>
                                 </div>
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
+
         </section>
     );
 }

@@ -20,10 +20,10 @@ export default function Home() {
       <Toolbox />
       <Skills />
       <Stats />
+      <Philosophy />
       <RecentWork />
       <DiveDeep />
       <Feedback />
-      <Philosophy />
       <Contact />
     </main>
   );

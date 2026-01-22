@@ -66,11 +66,11 @@ export default function About() {
         <div className="flex flex-wrap gap-6">
           <button className="relative bg-transparent border border-[#79B7FA]/20 cursor-pointer text-white px-8 py-4 rounded-full font-bold text-base flex items-center gap-2 hover:bg-[#79B7FA]/10 transition-all overflow-hidden">
             <span className="relative z-10">Contact Me With What&apos;s App →</span>
-            <BorderBeam duration={8} size={100} colorFrom="#3b82f6" colorTo="#9c40ff" />
+            <BorderBeam duration={8} size={100} colorFrom="#41A1EF" colorTo="#0A427D" />
           </button>
           <button className="relative bg-transparent border-2 border-[#79B7FA]/20 cursor-pointer text-white px-8 py-4 rounded-full font-bold text-base flex items-center gap-2 hover:bg-[#79B7FA]/10 transition-all overflow-hidden">
             <span className="relative z-10">Download Resume →</span>
-            <BorderBeam duration={8} size={100} colorFrom="#3b82f6" colorTo="#9c40ff" />
+            <BorderBeam duration={8} size={100} colorFrom="#41A1EF" colorTo="#0A427D" />
           </button>
         </div>
       </div>

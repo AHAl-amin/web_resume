@@ -1,13 +1,13 @@
 
 import profileImage from "@/public/images/profile_3.png";
-import image1 from "@/public/images/proffesion/image1.jpg";
-import image2 from "@/public/images/proffesion/image2.jpg";
-import image3 from "@/public/images/proffesion/image3.jpg";
-import image4 from "@/public/images/proffesion/image4.jpg";
+import image1 from "@/public/images/proffesion/image1.png";
+import image2 from "@/public/images/proffesion/image2.png";
+import image3 from "@/public/images/proffesion/image3.png";
+import image4 from "@/public/images/proffesion/image4.png";
 
-import image5 from "@/public/images/proffesion/image5.jpg";
-import image6 from "@/public/images/proffesion/image6.jpg";
-import image7 from "@/public/images/proffesion/image7.jpg";
+import image5 from "@/public/images/proffesion/image5.png";
+import image6 from "@/public/images/proffesion/image6.png";
+import image7 from "@/public/images/proffesion/image7.png";
 import Image from "next/image";
 import { Marquee } from "@/components/ui/marquee";
 

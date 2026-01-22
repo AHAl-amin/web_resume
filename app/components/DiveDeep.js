@@ -1,42 +1,47 @@
 "use client";
 
+import Image from "next/image";
+import divedeep from "../../public/images/divedeepbg.png"
+import deep1 from "../../public/images/Rectangle 141.png"
+import deep2 from "../../public/images/Rectangle 142.png"
+import deep3 from "../../public/images/Rectangle 143.png"
+
 export default function DiveDeep() {
     return (
-        <section className="w-full max-w-[1440px] mx-auto px-6 md:px-10 py-20 border-t border-white/5">
-            <div className="text-center mb-16">
-                <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-bold text-white abril-fatface mb-6">
-                    Sometimes, I dive deep
-                </h2>
-                <p className="text-white/60 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
-                    I write about design, productivity, and the occasional life musings. Sometimes I share behind-the-scenes of my projects, design thinking, and creative process. It&apos;s a mix of tutorials, reflections, and experiments.
-                </p>
-            </div>
+        <section className="relative w-full bg-cover bg-center min-h-screen"
+            style={{ backgroundImage: `url(${divedeep.src})` }}>
+            <div className="w-full max-w-[1440px] mx-auto px-10 lg:py-20 py-10  ">
+                <div className="text-center lg:space-y-14 space-y-10 ">
+                    <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-bold text-white  ">
+                        Sometimes, I dive deep
+                    </h2>
+                    <p className="text-[#90A1B9] text-lg md:text-[32px]  mx-auto ">
+                        I write about design, productivity, and the occasional life musings. Sometimes I share behind-the-scenes of my projects, design thinking, and creative process. It&apos;s a mix of tutorials, reflections, and experiments.
+                    </p>
+                </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                {[1, 2, 3].map((item) => (
-                    <div
-                        key={item}
-                        className="group relative aspect-[4/5] bg-white/5 rounded-[32px] border border-white/5 hover:border-[#79B7FA]/30 transition-all overflow-hidden"
-                    >
-                        <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+                <div className="flex justify-between lg:flex-row gap-10 xl:mt-26 lg:mt-20 mt-16 ">
+                    <div className=" flex flex-col justify-center items-center " >
+                        <Image alt="aa" src={deep1.src}  width={500} height={400}/>
 
-                        {/* Placeholder for blog/article image */}
-                        <div className="absolute inset-0 flex items-center justify-center">
-                            <span className="text-white/10 text-8xl font-bold">{item}</span>
-                        </div>
-
-                        {/* Content overlay */}
-                        <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
-                            <span className="text-[#79B7FA] text-sm font-semibold mb-2 block">Article</span>
-                            <h3 className="text-white text-xl font-bold mb-2 group-hover:text-[#79B7FA] transition-colors">
-                                Deep Dive Article {item}
-                            </h3>
-                            <p className="text-white/60 text-sm">
-                                Exploring design concepts and creative processes...
-                            </p>
-                        </div>
                     </div>
-                ))}
+                    <div className="flex flex-col justify-center items-center" >
+
+
+                        <Image alt="aa" src={deep2.src}   width={500} height={400} />
+                    </div>
+                    <div className="flex flex-col justify-center items-center" >
+
+
+                        <Image alt="aasd" src={deep3.src}   width={500} height={400} />
+                    </div>
+
+
+
+
+
+
+                </div>
             </div>
         </section>
     );
