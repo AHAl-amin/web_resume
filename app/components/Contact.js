@@ -1,77 +1,159 @@
-"use client";
+'use client';
+
+import React from "react"
+
+import { Mail, Phone, MapPin, Linkedin, Github, Facebook, Instagram, Twitter } from 'lucide-react';
 import Image from "next/image";
-import profileImage from "@/public/images/profile_1.png";
+import profile from "@/public/images/contact-profile.png";
+import { BorderBeam } from "@/components/ui/border-beam";
 
-export default function Contact() {
-    return (
-        <section className="w-full max-w-[1440px] mx-auto px-6 md:px-10 py-20 border-t border-white/5">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                {/* Left Side: Form */}
-                <div>
-                    <h2 className="text-[36px] md:text-[48px] lg:text-[56px] font-bold text-white abril-fatface leading-tight mb-8">
-                        Let&apos;s bring your ideas to life together
-                    </h2>
+export default function ContactSection() {
+  const [formData, setFormData] = React.useState({
+    name: '',
+    email: '',
+    message: '',
+  });
 
-                    <form className="space-y-6">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <input
-                                type="text"
-                                placeholder="First Name"
-                                className="bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-white/40 focus:border-[#79B7FA]/50 focus:outline-none transition-all"
-                            />
-                            <input
-                                type="text"
-                                placeholder="Last Name"
-                                className="bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-white/40 focus:border-[#79B7FA]/50 focus:outline-none transition-all"
-                            />
-                        </div>
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
 
-                        <input
-                            type="email"
-                            placeholder="Email"
-                            className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-white/40 focus:border-[#79B7FA]/50 focus:outline-none transition-all"
-                        />
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+  };
 
-                        <input
-                            type="tel"
-                            placeholder="Phone Number"
-                            className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-white/40 focus:border-[#79B7FA]/50 focus:outline-none transition-all"
-                        />
+  return (
+    <div className="">
+      {/* Main Contact Section */}
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 py-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
+          {/* Left Side: Contact Info */}
+          <div className="flex flex-col justify-start">
+            <h1 className="text-5xl md:text-6xl font-bold text-white/80 mb-6 leading-tight">
+              Let&apos;s bring your ideas to life together!
+            </h1>
+            
+            <p className="text-gray-400 mb-8 text-lg leading-relaxed">
+              Let&apos;s work together to turn your vision into meaningful, impactful results.
+            </p>
 
-                        <textarea
-                            placeholder="Message"
-                            rows={5}
-                            className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-white/40 focus:border-[#79B7FA]/50 focus:outline-none transition-all resize-none"
-                        ></textarea>
-
-                        <button
-                            type="submit"
-                            className="w-full bg-[#79B7FA] text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-white transition-all duration-500"
-                        >
-                            Get In Touch
-                        </button>
-                    </form>
-                </div>
-
-                {/* Right Side: Portrait */}
-                <div className="relative flex justify-center lg:justify-end">
-                    <div className="relative w-full max-w-[450px] aspect-square">
-                        <Image
-                            src={profileImage}
-                            alt="Let's Talk"
-                            fill
-                            className="object-contain rounded-[32px]"
-                        />
-
-                        {/* Decorative text overlay */}
-                        <div className="absolute bottom-10 left-10 right-10 text-center">
-                            <h3 className="text-[#79B7FA] text-[48px] md:text-[64px] font-bold abril-fatface leading-tight">
-                                Let&apos;s Turn Your Idea Into Reality
-                            </h3>
-                        </div>
-                    </div>
-                </div>
+            {/* Contact Details */}
+            <div className="space-y-4 mb-12">
+              <div className="flex items-center gap-3 text-gray-300">
+                <Mail size={20} className="text-blue-400" />
+                <a href="mailto:rahimofficial2406@gmail.com" className="hover:text-blue-400 transition">
+                  rahimofficial2406@gmail.com
+                </a>
+              </div>
+              <div className="flex items-center gap-3 text-gray-300">
+                <Phone size={20} className="text-blue-400" />
+                <span>01834342929</span>
+              </div>
+              <div className="flex items-center gap-3 text-gray-300">
+                <MapPin size={20} className="text-blue-400" />
+                <span>01980012351</span>
+              </div>
             </div>
-        </section>
-    );
+
+            {/* Social Links */}
+            <div>
+              <p className="text-gray-400 mb-4 font-semibold">Find me on</p>
+              <div className="flex gap-4">
+                <a href="#" className="bg-gray-900 hover:bg-blue-500 transition p-3 rounded-full">
+                  <Linkedin size={20} className="text-blue-400 hover:text-white" />
+                </a>
+                <a href="#" className="bg-gray-900 hover:bg-blue-500 transition p-3 rounded-full">
+                  <Github size={20} className="text-blue-400 hover:text-white" />
+                </a>
+                <a href="#" className="bg-gray-900 hover:bg-blue-500 transition p-3 rounded-full">
+                  <Facebook size={20} className="text-blue-400 hover:text-white" />
+                </a>
+                <a href="#" className="bg-gray-900 hover:bg-blue-500 transition p-3 rounded-full">
+                  <Instagram size={20} className="text-blue-400 hover:text-white" />
+                </a>
+                <a href="#" className="bg-gray-900 hover:bg-blue-500 transition p-3 rounded-full">
+                  <Twitter size={20} className="text-blue-400 hover:text-white" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Side: Contact Form */}
+          <div className="bg-gray-900/50 backdrop-blur border border-gray-800 rounded-2xl p-8">
+            <h2 className="text-2xl font-bold text-white/80 mb-8">Get In Touch</h2>
+            
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter Your name"
+                value={formData.name}
+                onChange={handleChange}
+                className="w-full bg-transparent border-b border-gray-600 text-white placeholder:text-gray-500 pb-3 focus:border-blue-400 focus:outline-none transition"
+              />
+              
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter Your e-mail"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full bg-transparent border-b border-gray-600 text-white placeholder:text-gray-500 pb-3 focus:border-blue-400 focus:outline-none transition"
+              />
+              
+              <textarea
+                name="message"
+                placeholder="Write Message"
+                value={formData.message}
+                onChange={handleChange}
+                rows={4}
+                className="w-full bg-transparent border-b border-gray-600 text-white placeholder:text-gray-500 pb-3 focus:border-blue-400 focus:outline-none transition resize-none"
+              />
+
+              <button className="relative mt-3 flex items-center gap-2 px-8 py-4 rounded-full bg-linear-to-r from-[#0A427D]/40 via-transparent to-[#0A427D]/40 text-white font-medium text-sm overflow-hidden border border-white/10 cursor-pointer group">
+                                         <span className="relative z-10 flex items-center gap-2">
+                                            Send
+                                         </span>
+             
+                                         <BorderBeam
+                                             duration={6}
+                                             delay={3}
+                                             size={400}
+                                             anchor="left"
+                                             borderWidth={2}
+                                             className=""
+                                             colorFrom="#41A1EF" colorTo="#0A427D"
+                                         />
+                                     </button>
+            </form>
+          </div>
+        </div>
+
+        {/* Bottom Section */}
+        <div className="lg:max-w-5xl w-full mx-auto flex items-center lg:flex-row flex-col justify-between gap-20">
+          {/* Profile Image */}
+          <div className="flex justify-center lg:justify-start">
+            <div className=" w-[313px] h-[333px] rounded-3xl overflow-hidden">
+              <Image
+                src={profile.src}
+                width={356}
+                height={356}
+                alt="Profile"
+                className="w-full h-full "
+              />
+            </div>
+          </div>
+
+          {/* Large Text */}
+          <div>
+            <h3 className="text-5xl md:text-[80px] font-bold text-[#243C72] leading-tight">
+              Let&apos;s Turn Your Idea Into Reality
+            </h3>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
 }
