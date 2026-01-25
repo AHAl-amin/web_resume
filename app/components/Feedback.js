@@ -119,14 +119,6 @@ const ClientFeedback = () => {
                 </div>
 
                 <div className='absolute bottom-2 left-5/10  z-10     flex justify-between items-center gap-2 translate-x-[-50%]'>
-                    {/* Right Arrow */}
-                    <button
-                        onClick={goToNext}
-                        className=" bottom-0  z-10 p-2 md:p-3 rounded-full border border-blue-400/30 hover:bg-blue-400/10 transition-all cursor-pointer"
-                        aria-label="Next feedback"
-                    >
-                        <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-blue-400" />
-                    </button>
 
                     {/* Left Arrow */}
                     <button
@@ -135,6 +127,14 @@ const ClientFeedback = () => {
                         aria-label="Previous feedback"
                     >
                         <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-blue-400" />
+                    </button>
+                    {/* Right Arrow */}
+                    <button
+                        onClick={goToNext}
+                        className=" bottom-0  z-10 p-2 md:p-3 rounded-full border border-blue-400/30 hover:bg-blue-400/10 transition-all cursor-pointer"
+                        aria-label="Next feedback"
+                    >
+                        <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-blue-400" />
                     </button>
                 </div>
             </div>

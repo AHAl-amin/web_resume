@@ -1,7 +1,7 @@
 "use client";
 import { FaFigma } from "react-icons/fa";
 import { SiAdobexd, SiAdobephotoshop, SiAdobeillustrator } from "react-icons/si";
-import toolsBanner from "@/public/images/tollsbanner.png";
+
 
 export default function Toolbox() {
     const tools = [
@@ -33,14 +33,20 @@ export default function Toolbox() {
 
     return (
         <section className="relative w-full max-w-[1440px] mx-auto px-6 md:px-10 py-30  ">
-            {/* Background Glow */}
-            {/* <div className={`absolute top-0 left-0 w-full h-full bg-[url(${toolsBanner.src})] bg-cover bg-center`} >
-            </div> */}
 
-            <div
-                className="absolute inset-0 bg-cover bg-center -z-10"
-                style={{ backgroundImage: `url(${toolsBanner.src})` }}
-            ></div>
+
+            <video
+                className="absolute inset-0 bg-cover bg-center -z-10 opacity-20"
+                src='/video.mov'
+                autoPlay
+                loop
+                muted
+            ></video>
+        
+            <div className="absolute bottom-0 left-0 w-full h-[300px] 
+    bg-linear-to-t from-[#00070C] via-[#00070C]/60 to-transparent 
+    -z-10 "
+            />
 
 
             <div className="flex lg:flex-row flex-col justify-between items-start gap-16 lg:gap-0  relative z-10">
