@@ -14,6 +14,7 @@ import cardimg2 from '@/public/images/recentwork/image2.png';
 import cardimg3 from '@/public/images/recentwork/image3.png';
 import cardimg4 from '@/public/images/recentwork/image4.png';
 import Image from 'next/image';
+import { BorderBeam } from '@/components/ui/border-beam';
 
 export default function RecentWork() {
     const projects = [
@@ -64,12 +65,12 @@ export default function RecentWork() {
     ];
 
     return (
-        <section className="w-full max-w-[1440px] mx-auto px-6 md:px-10 ">
+        <section className="w-full max-w-[1440px] mx-auto px-6 md:px-10 py-40 ">
             <div className="mb-12">
                 <h2 className="text-4xl md:text-5xl font-bold text-white/80 mb-4">Recent work</h2>
             </div>
 
-            <div className="grid grid-cols-1  gap-8">
+            <div className="grid grid-cols-1  gap-8 ">
                 {projects.map((project) => (
                     <div
                         key={project.id}
@@ -140,6 +141,12 @@ export default function RecentWork() {
                 ))}
 
             </div>
+           <div className="flex justify-center pt-10">
+           <button className="relative bg-transparent border border-[#79B7FA]/20 cursor-pointer bg-linear-to-r from-[#0A427D]/40 via-transparent to-[#0A427D]/40 text-white px-8 py-4 rounded-full font-bold text-base flex items-center gap-2 hover:bg-[#79B7FA]/10 transition-all overflow-hidden">
+                <span className="relative z-10">View All Projects →</span>
+                <BorderBeam duration={8} size={100} colorFrom="#41A1EF" colorTo="#0A427D" />
+            </button>
+           </div>
         </section>
     );
 }

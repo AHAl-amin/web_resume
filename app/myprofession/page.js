@@ -15,8 +15,11 @@ import { Marquee } from "@/components/ui/marquee";
 
 export default function MyProfession() {
     return (
-        <section className="max-w-[1440px] mx-auto px-6 md:px-10 py-20 ">
-            <div className=" grid grid-cols-1 lg:grid-cols-2 gap-0 items-center">
+        <section className="max-w-[1440px] mx-auto px-6 md:px-10 py-20   ">
+            <div className=" grid grid-cols-1 lg:grid-cols-2 gap-0 items-center border-b-2 border-[#0A427D]/60 rounded-2xl relative">
+            <div className="absolute bottom-0 left-0 w-full h-[50px] bg-linear-to-t from-[#0A427D]/40 to-transparent rounded-b-2xl">
+              
+            </div>
                 {/* Left Side: Content */}
                 <div className="space-y-6 ">
                     <h2 className="text-[40px] md:text-[48px] lg:text-[58px] font-bold text-white leading-tight mb-10   ">
@@ -28,12 +31,12 @@ export default function MyProfession() {
 
 
 
-                            After successfully completing an intensive professional Product Design course, <span className="text-[#ffffffec] text-[20px] font-semibold">I joined Bitopia Group of Company</span>, a fast-growing organization that continues to strengthen its leadership position in the tech industry.
+                            After successfully completing an intensive professional Product Design course, <span className="text-[#5BA1E9] text-[20px] font-semibold">I joined Bitopia Group of Company</span>, a fast-growing organization that continues to strengthen its leadership position in the tech industry.
 
                         </p>
 
                         <p>
-                            Since joining, I have contributed to numerous high-impact projects from concept to execution. My responsibilities include <span className="text-[#ffffffec] text-[20px] font-semibold">user research, wireframing, UI/UX design, prototyping, and collaboration with development teams to ensure seamless implementation</span>. The majority of these projects have received excellent feedback and strong appreciation from stakeholders and end-users alike, reflecting my commitment to delivering intuitive, visually appealing, and functional design solutions.
+                            Since joining, I have contributed to numerous high-impact projects from concept to execution. My responsibilities include <span className="text-[#5BA1E9] text-[20px] font-semibold">user research, wireframing, UI/UX design, prototyping, and collaboration with development teams to ensure seamless implementation</span>. The majority of these projects have received excellent feedback and strong appreciation from stakeholders and end-users alike, reflecting my commitment to delivering intuitive, visually appealing, and functional design solutions.
                         </p>
 
                         <p>

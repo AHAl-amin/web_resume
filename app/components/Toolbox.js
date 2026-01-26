@@ -1,6 +1,11 @@
 "use client";
 import { FaFigma } from "react-icons/fa";
 import { SiAdobexd, SiAdobephotoshop, SiAdobeillustrator } from "react-icons/si";
+import Image from "next/image";
+import img1 from "@/public/figma.png";
+import img2 from "@/public/xd.png";
+import img3 from "@/public/photoshop.png";
+import img4 from "@/public/illustrator.png";
 
 
 export default function Toolbox() {
@@ -8,48 +13,49 @@ export default function Toolbox() {
         {
             name: "Figma",
             level: "90%",
-            icon: <FaFigma className="text-[#F24E1E]" />,
+            icon: <Image src={img1} alt="Figma" width={30} height={30} />,
             desc: "Used for creating professional design work"
         },
         {
             name: "Adobe XD",
             level: "85%",
-            icon: <SiAdobexd className="text-[#FF61F6]" />,
+            icon: <Image src={img2} alt="Adobe XD" width={40} height={40} />,
             desc: "Prototyping and user experience design"
         },
         {
             name: "Adobe Photoshop",
             level: "75%",
-            icon: <SiAdobephotoshop className="text-[#31A8FF]" />,
+            icon: <Image src={img3} alt="Adobe Photoshop" width={40} height={40} />,
             desc: "Layout design and photo manipulation"
         },
         {
             name: "Adobe Illustrator",
             level: "70%",
-            icon: <SiAdobeillustrator className="text-[#FF9A00]" />,
+            icon: <Image src={img4} alt="Adobe Illustrator" width={40} height={40} />,
             desc: "Icons and branding assets creation"
         },
     ];
 
     return (
-        <section className="relative w-full max-w-[1440px] mx-auto px-6 md:px-10 py-30  ">
+        <section className="relative w-full  py-30 mt-30 h-screen">
 
 
             <video
-                className="absolute inset-0 bg-cover bg-center -z-10 opacity-20"
-                src='/video.mov'
+                className="absolute inset-0 bg-cover  -z-10 opacity-20 h-full"
+                src='https://res.cloudinary.com/dcpbtzues/video/upload/v1769408945/video9_ryxizd.mp4'
+                poster="https://res.cloudinary.com/dcpbtzues/image/upload/v1769420317/tollsbanner_ym0dep.png"
                 autoPlay
                 loop
                 muted
             ></video>
-        
+
             <div className="absolute bottom-0 left-0 w-full h-[300px] 
-    bg-linear-to-t from-[#00070C] via-[#00070C]/60 to-transparent 
+                           bg-linear-to-t from-[#00070C] via-[#00070C]/60 to-transparent 
     -z-10 "
             />
 
 
-            <div className="flex lg:flex-row flex-col justify-between items-start gap-16 lg:gap-0  relative z-10">
+            <div className="flex lg:flex-row flex-col justify-between items-start gap-16 lg:gap-0  relative z-10 max-w-[1440px] mx-auto px-6 md:px-10">
                 {/* Left Side: Globe Visual */}
                 <div className="flex flex-col items-center lg:w-1/2 w-full">
                     <div className="text-end  px-8  ">
@@ -67,7 +73,7 @@ export default function Toolbox() {
                             key={index}
                             className="bg-[#111111]/50 backdrop-blur-xl border border-[#0A427D] p-6 rounded-[24px] flex  gap-6 group hover:border-[#0A427D]/30 transition-all duration-500"
                         >
-                            <div className="w-14 h-14 shrink-0 bg-white/5 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+                            <div className="w-14 h-14 shrink-0  rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
                                 {tool.icon}
                             </div>
                             <div className="w-full flex flex-col gap-2 ">
