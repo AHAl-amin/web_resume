@@ -61,19 +61,19 @@ export default function ContactSection() {
             <div>
               <p className="text-gray-400 mb-4 font-semibold">Find me on</p>
               <div className="flex gap-4">
-                <a href="#" className="bg-gray-900 hover:bg-blue-500 transition p-3 rounded-full">
+                <a href="#" className="bg-gray-900 hover:bg-gray-700 transition-all duration-300 ease-in-out p-3 rounded-full">
                   <Linkedin size={20} className="text-blue-400 hover:text-white" />
                 </a>
-                <a href="#" className="bg-gray-900 hover:bg-blue-500 transition p-3 rounded-full">
+                <a href="#" className="bg-gray-900 hover:bg-gray-700 transition-all duration-300 ease-in-out p-3 rounded-full">
                   <Github size={20} className="text-blue-400 hover:text-white" />
                 </a>
-                <a href="#" className="bg-gray-900 hover:bg-blue-500 transition p-3 rounded-full">
+                <a href="#" className="bg-gray-900 hover:bg-gray-700 transition-all duration-300 ease-in-out p-3 rounded-full">
                   <Facebook size={20} className="text-blue-400 hover:text-white" />
                 </a>
-                <a href="#" className="bg-gray-900 hover:bg-blue-500 transition p-3 rounded-full">
+                <a href="#" className="bg-gray-900 hover:bg-gray-700 transition-all duration-300 ease-in-out p-3 rounded-full">
                   <Instagram size={20} className="text-blue-400 hover:text-white" />
                 </a>
-                <a href="#" className="bg-gray-900 hover:bg-blue-500 transition p-3 rounded-full">
+                <a href="#" className="bg-gray-900 hover:bg-gray-700 transition-all duration-300 ease-in-out p-3 rounded-full">
                   <Twitter size={20} className="text-blue-400 hover:text-white" />
                 </a>
               </div>
@@ -132,27 +132,21 @@ export default function ContactSection() {
         </div>
 
         {/* Bottom Section */}
-        <div className="lg:max-w-5xl w-full mx-auto flex items-center lg:flex-row flex-col justify-between gap-20">
-          {/* Profile Image */}
-          <div className="flex justify-center lg:justify-start">
-            <div className=" w-[313px] h-[333px] rounded-3xl overflow-hidden">
-              <Image
-                src={profile.src}
-                width={356}
-                height={356}
-                alt="Profile"
-                className="w-full h-full "
-              />
-            </div>
-          </div>
+   
+ 
 
           {/* Large Text */}
-          <div>
-            <h3 className="text-5xl md:text-[80px] font-bold text-[#243C72] leading-tight">
-              Let&apos;s Turn Your Idea Into Reality
+          <div className="flex justify-center items-center">
+           <div className="text-center space-y-4">
+             <h3 className="text-4xl md:text-[60px] font-bold text-[#E2E8F0] leading-tight">
+              Let's Design Your Website
             </h3>
+            <p className="text-white/50  md:text-2xl max-w-2xl">
+              Make Your Idea Into Reality
+            </p>
+           </div>
           </div>
-        </div>
+        
       </section>
     </div>
   );

@@ -1,4 +1,4 @@
-import { Roboto_Flex, Abril_Fatface, Marck_Script } from "next/font/google";
+import { Roboto_Flex, Abril_Fatface, Marck_Script, Luxurious_Script, Luxurious_Roman, Cinzel } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -20,6 +20,23 @@ const marckScript = Marck_Script({
   variable: "--font-marck-script",
 });
 
+const luxuryScript = Luxurious_Script({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-luxury-script",
+});
+
+const luxuryRoman = Luxurious_Roman({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-luxury-roman",
+});
+
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  variable: "--font-cinzel",
+});
+
 export const metadata = {
   title: "Rahim Rehman",
   description: "Rahim Rehman Portfolio",
@@ -29,7 +46,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${robotoFlex.variable} ${abrilFatface.variable} ${marckScript.variable} bg-[#000000] text-white antialiased overflow-x-hidden`}
+        className={`${robotoFlex.variable} ${abrilFatface.variable} ${marckScript.variable} ${luxuryScript.variable} ${luxuryRoman.variable} ${cinzel.variable} bg-[#000000] text-white antialiased overflow-x-hidden`}
       >
         <div className="relative">
           <div className="absolute top-40 right-0  h-[700px] w-[600px] bg-[radial-gradient(circle,#035AB7,#072340)] rounded-full opacity-40 blur-[180px] pointer-events-none overflow-x-hidden"></div>

@@ -1,10 +1,14 @@
+
 import bannerImage from "@/public/images/banerimg.png";
 import Image from "next/image";
 import profileImage from "@/public/images/profile_1.png";
 import { FaBehance, FaLinkedinIn, FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
+import { Marquee } from "@/components/ui/marquee";
+import imagebanner from "@/public/images/bannertext.png";
 
 export default function Banner() {
+    const tags = ["UX/UI", "Website", "Mobile App", "Dashboard", "Responsive Design", "Design System", "Visual Design"];
     return (
         <section className="relative">
             {/* Background Image */}
@@ -27,11 +31,24 @@ export default function Banner() {
                 <div className=" h-full flex flex-col items-center justify-center w-full   ">
 
                     {/* Main Title Center-Top */}
-                    <div className="absolute  2xl:top-[13%]  lg:top-[10%] top-[10%] text-center ">
-                        <h1 className="text-[50px] lg:text-[60px] xl:text-[80px] font-bold tracking-normal text-[#79B7FA]/50 leading-[0.85] abril-fatface">
-                            I’M a Product <br />
-                            <span className="">Designer</span>
+                    <div className="absolute  2xl:top-[13%]  lg:top-[10%] top-[15%] text-center ">
+                        <h3 className="flex items-center justify-center gap-2 md:text-[28px] text-[20px] mb-6 ">
+                            <svg width="35" height="27" viewBox="0 0 35 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0V2.5C0 9.41667 3.68333 15.4667 9.16667 18.8333V26.6667H34.1667V23.3333C34.1667 18.9 25.2833 16.6667 20.8333 16.6667H20.4167C12.5 16.6667 5.83333 10 5.83333 2.5V0M20.8333 0C19.0652 0 17.3695 0.702379 16.1193 1.95262C14.869 3.20286 14.1667 4.89856 14.1667 6.66667C14.1667 8.43478 14.869 10.1305 16.1193 11.3807C17.3695 12.631 19.0652 13.3333 20.8333 13.3333C22.6014 13.3333 24.2971 12.631 25.5474 11.3807C26.7976 10.1305 27.5 8.43478 27.5 6.66667C27.5 4.89856 26.7976 3.20286 25.5474 1.95262C24.2971 0.702379 22.6014 0 20.8333 0Z" fill="#E2E8F0" />
+                            </svg>
+                            <p className=" text-[#E2E8F0]">
+                                Hey, This Is Rahim Rehman Here
+                            </p>
+
+                        </h3>
+                        <h1 className=" text-[50px] lg:text-[60px] xl:text-[130px] font-bold tracking-normal text-[#2273C9] leading-[0.85] ">
+                            I’M a UX/UI  <br />
+
                         </h1>
+                        <Image src={imagebanner.src} alt="Banner" className="h-full w-full object-cover" height={1000} width={1000} />
+
+
+
                     </div>
 
                     {/* Profile Image (Centered & Higher Z-index) */}
@@ -48,30 +65,10 @@ export default function Banner() {
                     {/* Marquee with Gradient Background */}
 
 
-                    {/* Tagline Bottom Left */}
-                    <div className="absolute bottom-[24%] left-10 md:left-10 z-30 ">
-                        <p className="text-[32px] md:text-[40px] text-white/90 leading-tight marck-script">
-                            <span className="text-[#6BB4F8]">Turning</span> Complex Problems
-                            <br />
-                            into Intuitive <span className="text-[#6BB4F8]">Experiences</span>
-                        </p>
-                    </div>
 
-                    {/* Name & Location Middle Right */}
-                    <div className="absolute top-[50%] right-[10%] md:right-[10%] z-30 flex flex-col items-start translate-y-[-50%]">
-                        <div className="  ">
-                            <h2 className="text-[40px] font-roboto font-medium text-[#FFFFFF] tracking-widest">
-                                Rahim Rehman
-                            </h2>
-                        </div>
-                        <div className="flex items-center gap-2 mt-4 text-white/60 ">
-                            <IoLocationOutline className="text-[#79B7FA] text-xl" />
-                            <span className="text-base font-roboto tracking-[0.2em] font-light ">Bangladesh</span>
-                        </div>
-                    </div>
 
                     {/* Social Sidebar Far Right */}
-                    <div className="absolute right-10 top-1/2 -translate-y-1/2 z-40 flex flex-col gap-6">
+                    <div className="absolute md:right-10 right-2 top-1/2 -translate-y-1/2 z-40 flex flex-col gap-6">
                         <SocialIcon icon={<FaBehance />} href="#" />
                         <SocialIcon icon={<FaLinkedinIn />} href="#" />
                         <SocialIcon icon={<FaFacebookF />} href="#" />
@@ -79,12 +76,21 @@ export default function Banner() {
                         <SocialIcon icon={<FaWhatsapp />} href="#" />
                     </div>
                 </div>
-                ``
+
             </div>
-            <div className=" absolute bottom-0 w-full h-[60px] bg-[#6BB4F8]   flex items-center">
-                <marquee className="text-white/50 text-5xl font-bold uppercase tracking-widest">
-                    Product Designer • UI/UX Designer • Rahim Rehman • Product Designer • UI/UX Designer • Rahim Rehman •
-                </marquee>
+            <div className="absolute bottom-0 w-full h-[300px] bg-linear-to-t from-[#000000] to-transparent ">
+
+
+            </div>
+            <div className=" absolute bottom-10 w-full  bg-[#000000]   flex items-center">
+                <Marquee className="py-4" pauseOnHover repeat={6} >
+                    {tags.map((tag, index) => (
+                        <div key={index} className="flex items-center gap-3 mx-4">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#E2E8F0]/50" />
+                            <span className="text-[#E2E8F0]/50  text-sm md:text-base font-bold whitespace-nowrap uppercase tracking-wider">{tag}</span>
+                        </div>
+                    ))}
+                </Marquee>
             </div>
 
         </section>

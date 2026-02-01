@@ -36,6 +36,9 @@ export default function Navbar() {
                     />
                 </Link>
 
+
+                {/* Desktop CTA */}
+              <div className="flex items-center gap-10">
                 {/* Desktop Menu */}
                 <ul className="hidden md:flex gap-8 text-white text-[18px]">
                     {navLinks.map((link) => (
@@ -49,20 +52,19 @@ export default function Navbar() {
                         </li>
                     ))}
                 </ul>
-
-                {/* Desktop CTA */}
-                <div className="hidden md:block">
+                  <div className="hidden md:block">
                     <button className="relative overflow-hidden flex items-center gap-2 px-8 py-2.5 rounded-full bg-linear-to-r from-[#0A427D]/40 via-transparent to-[#0A427D]/40 text-white font-medium text-sm  border border-white/10 cursor-pointer group">
                         <span className="relative z-10 flex items-center gap-2">
                             Hire Me
                             <MdArrowOutward className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                         </span>
 
-   
 
-      <BorderBeam duration={8} size={100} colorFrom="#41A1EF" colorTo="#0A427D" anchor="left" />
+
+                        <BorderBeam duration={8} size={100} colorFrom="#41A1EF" colorTo="#0A427D" anchor="left" />
                     </button>
                 </div>
+              </div>
 
                 {/* Mobile Menu Toggle */}
                 <button
@@ -91,13 +93,13 @@ export default function Navbar() {
                         ))}
                     </ul>
 
-                      <button className="relative mt-3 flex items-center gap-2 px-8 py-2.5 rounded-full bg-linear-to-r from-[#0A427D]/40 via-transparent to-[#0A427D]/40 text-white font-medium text-sm overflow-hidden border border-white/10 cursor-pointer group">
+                    <button className="relative mt-3 flex items-center gap-2 px-8 py-2.5 rounded-full bg-linear-to-r from-[#0A427D]/40 via-transparent to-[#0A427D]/40 text-white font-medium text-sm overflow-hidden border border-white/10 cursor-pointer group">
                         <span className="relative z-10 flex items-center gap-2">
                             Hire Me
                             <MdArrowOutward className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                         </span>
 
-                      <BorderBeam duration={8} size={100} colorFrom="#41A1EF" colorTo="#0A427D" anchor='left' />
+                        <BorderBeam duration={8} size={100} colorFrom="#41A1EF" colorTo="#0A427D" anchor='left' />
                     </button>
                 </div>
             </div>

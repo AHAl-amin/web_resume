@@ -10,13 +10,17 @@ import RecentWork from "./components/RecentWork";
 import DiveDeep from "./components/DiveDeep";
 import Feedback from "./components/Feedback";
 import Contact from "./components/Contact";
+import ProfessionalJourney from "./components/ProfessionalJourney";
+import RahimIntriduce from "./components/RahimIntriduce";
 
 export default function Home() {
   return (
     <main>
       <Banner />
-      <About />
       <MyProfession />
+      <RahimIntriduce />
+      <ProfessionalJourney />
+      <About />
       <Toolbox />
       <Skills />
       <Stats />

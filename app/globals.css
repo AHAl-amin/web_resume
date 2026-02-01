@@ -12,7 +12,9 @@
   --font-roboto: var(--font-roboto-flex);
   --font-abril: var(--font-abril-fatface);
   --font-marck: var(--font-marck-script);
-
+  --font-luxury: var(--font-luxury-script);
+  --font-luxury-roman: var(--font-luxury-roman);
+  --font-cinzel: var(--font-cinzel);
 }
 
 body {
@@ -75,6 +77,10 @@ body {
 
 .abril-fatface {
   font-family: var(--font-abril-fatface);
+}
+
+.luxury-script {
+  font-family: var(--font-luxury-script);
 }
 
 @theme inline {
