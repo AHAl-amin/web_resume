@@ -6,6 +6,7 @@ import { Mail, Phone, MapPin, Linkedin, Github, Facebook, Instagram, Twitter } f
 import Image from "next/image";
 import profile from "@/public/images/contact-profile.png";
 import { BorderBeam } from "@/components/ui/border-beam";
+import { motion } from "framer-motion";
 
 export default function ContactSection() {
   const [formData, setFormData] = React.useState({
@@ -30,7 +31,13 @@ export default function ContactSection() {
       <section className="max-w-[1440px] mx-auto px-6 md:px-10 py-12 lg:py-24 mt-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
           {/* Left Side: Contact Info */}
-          <div className="flex flex-col justify-start">
+          <motion.div
+            className="flex flex-col justify-start"
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+          >
             <h1 className="text-5xl md:text-6xl font-['luxury'] font-bold text-white/80 mb-6 leading-tight">
               Let&apos;s bring your ideas to life together!
             </h1>
@@ -78,10 +85,16 @@ export default function ContactSection() {
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Side: Contact Form */}
-          <div className="bg-gray-900/50 backdrop-blur border border-gray-800 rounded-2xl p-8">
+          <motion.div
+            className="bg-gray-900/50 backdrop-blur border border-gray-800 rounded-2xl p-8"
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+          >
             <h2 className="text-2xl font-bold text-white/80 font-['luxury'] mb-8">Get In Touch</h2>
             
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -128,7 +141,7 @@ export default function ContactSection() {
                                          />
                                      </button>
             </form>
-          </div>
+          </motion.div>
         </div>
 
         {/* Bottom Section */}

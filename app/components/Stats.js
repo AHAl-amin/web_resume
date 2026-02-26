@@ -50,8 +50,6 @@ export default function Stats() {
                                     end={stat.end}
                                     duration={2.5}
                                     suffix={stat.suffix}
-                                    enableScrollSpy
-                                    scrollSpyOnce
                                 />
                             </div>
                             <div className={`  flex items-center justify-center rounded-2xl ${index === 0 ? "w-20 h-20" : "w-12 h-12"} transition-transform`}>

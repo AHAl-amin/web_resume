@@ -1,4 +1,6 @@
 
+"use client";
+
 import profileImage from "@/public/images/profile_4.png";
 import image1 from "@/public/images/proffesion/image1.png";
 import image2 from "@/public/images/proffesion/image2.png";
@@ -10,10 +12,21 @@ import image6 from "@/public/images/proffesion/image6.png";
 import image7 from "@/public/images/proffesion/image7.png";
 import Image from "next/image";
 import { Marquee } from "@/components/ui/marquee";
+import { motion } from "framer-motion";
 
 
 
 export default function ProfessionalJourney() {
+    const leftVariants = {
+        hidden: { opacity: 0, x: -100 },
+        visible: { opacity: 1, x: 0 }
+    };
+
+    const rightVariants = {
+        hidden: { opacity: 0, x: 100 },
+        visible: { opacity: 1, x: 0 }
+    };
+
     return (
         <section>
 
@@ -23,7 +36,14 @@ export default function ProfessionalJourney() {
               
             </div>
                 {/* Left Side: Content */}
-                <div className="space-y-6 ">
+                <motion.div
+                    className="space-y-6"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.3 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    variants={leftVariants}
+                >
                     <h2 className="text-[24px] lg:pl-10 pl-0   md:text-[48px] lg:text-[58px] font-bold font-['luxury'] text-white leading-tight mb-10   ">
                         My Professional Journey
                     </h2>
@@ -45,10 +65,17 @@ export default function ProfessionalJourney() {
                             This experience has sharpened my expertise in modern design tools (Figma, Adobe XD etc.), design thinking methodologies, and user-centered product development while working in a dynamic, results-driven environment.
                         </p>
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Right Side: Portrait */}
-                <div className="relative flex justify-center lg:justify-end">
+                <motion.div
+                    className="relative flex justify-center lg:justify-end"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.3 }}
+                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                    variants={rightVariants}
+                >
                     <div className="relative w-full aspect-square  ">
                         <Image
                             src={profileImage}
@@ -57,7 +84,7 @@ export default function ProfessionalJourney() {
                             className="object-contain rounded-[32px]   transition-all duration-700"
                         />
                     </div>
-                </div>
+                </motion.div>
             </div>
 
         </section>

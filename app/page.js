@@ -15,20 +15,26 @@ import RahimIntriduce from "./components/RahimIntriduce";
 
 export default function Home() {
   return (
-    <main>
+    <main className="scroll-smooth">
       <Banner />
       <MyProfession />
       <RahimIntriduce />
-      <ProfessionalJourney />
+      <section id="professional-journey">
+        <ProfessionalJourney />
+      </section>
       {/* <About /> */}
       <Toolbox />
       <Skills />
       <Stats />
       {/* <Philosophy /> */}
-      <RecentWork />
+      <section id="recent-work">
+        <RecentWork />
+      </section>
       <DiveDeep />
       <Feedback />
-      <Contact />
+      <section id="contact">
+        <Contact />
+      </section>
     </main>
   );
 }

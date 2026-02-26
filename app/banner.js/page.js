@@ -17,7 +17,7 @@ export default function Banner() {
 
             {/* Decorative Circle */}
 
-            <div className="relative lg:min-h-[100vh] min-h-[100vh] w-full flex justify-center overflow-hidden  max-w-[1440px] mx-auto px-10   ">
+            <div className="relative h-screen w-full flex justify-center overflow-hidden  max-w-[1440px] mx-auto px-10   ">
                 <div
                     className="absolute inset-0 z-0 opacity-40 w-1/2 mx-auto"
                     style={{
@@ -43,10 +43,42 @@ export default function Banner() {
                             </p>
 
                         </h3>
-                        <h1 className=" text-[50px] lg:text-[70px] xl:text-[150px] font-['Luxury'] font-bold tracking-normal text-[#2273C9] leading-[0.85] ">
-                            I’M  UX/UI  <br />
-
-                        </h1>
+                        <motion.h1
+                            className=" text-[50px] lg:text-[70px] xl:text-[150px] font-['Luxury'] font-bold tracking-normal text-[#2273C9] leading-[0.85]"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: false, amount: 0.5 }}
+                            variants={{
+                                hidden: { opacity: 0 },
+                                visible: {
+                                    opacity: 1,
+                                    transition: {
+                                        staggerChildren: 0.2,
+                                        delayChildren: 0,
+                                    },
+                                },
+                            }}
+                        >
+                            {'I\'M UX/UI'.split('').map((char, index) => (
+                                <motion.span
+                                    key={index}
+                                    variants={{
+                                        hidden: { opacity: 0, y: -200 },
+                                        visible: {
+                                            opacity: 1,
+                                            y: 0,
+                                            transition: {
+                                                duration: 0.4,
+                                                ease: "easeInOut",
+                                            },
+                                        },
+                                    }}
+                                >
+                                    {char}
+                                </motion.span>
+                            ))}
+                            <br />
+                        </motion.h1>
                         <Image src={imagebanner.src} alt="Banner" className="h-full w-full object-cover mt-5" height={1000} width={1000} />
 
 
@@ -57,7 +89,8 @@ export default function Banner() {
                     <motion.div
                         className="absolute -bottom-20"
                         initial={{ y: 120, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        viewport={{ once: false, amount: 0.3 }}
                         transition={{ duration: 1, type: "spring", bounce: 0.3, delay: 0.2 }}
                     >
                         <Image

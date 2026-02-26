@@ -8,6 +8,7 @@ import img3 from "@/public/photoshop.png";
 import img4 from "@/public/illustrator.png";
 import Skills from "./Skills";
 import { FiArrowUpRight } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 
 export default function Toolbox() {
@@ -53,6 +54,19 @@ export default function Toolbox() {
             }
         ];
 
+    const cardVariants = {
+        hidden: { opacity: 0, y: 100 },
+        visible: (index) => ({
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: index * 0.2,
+                duration: 0.6,
+                ease: "easeOut"
+            }
+        })
+    };
+
     return (
         <section className="relative w-full  py-30 xl:mt-30 lg:mt-12 md:mt-10 mt-0 md:mb-0 mb-20 h-screen">
 
@@ -79,9 +93,14 @@ export default function Toolbox() {
             {/* Service Cards */}
             <div className="flex flex-col gap-1 mb-20">
                 {services.map((service, index) => (
-                    <div
+                    <motion.div
                         key={index}
                         className={`group lg:py-6 md:py-2 py-2 flex  justify-between items-start md:items-center lg:gap-6 md:gap-2 gap-2 transition-all hover:bg-white/2   ${index === 0 ? "border-t border-white/10" : "" || index === 1 ? "border-t border-white/10" : "" || index === 2 ? "border-t border-white/10 " : ""}`}
+                                            initial="hidden"
+                                            whileInView="visible"
+                                            viewport={{ once: false, amount: 0.5 }}
+                                            variants={cardVariants}
+                                            custom={index}
                     >
                         <div className="flex-1">
                             <h3 className="text-2xl md:text-3xl font-medium text-white mb-4 font-['luxury'] group-hover:text-[#79B7FA] transition-colors">
@@ -99,7 +118,7 @@ export default function Toolbox() {
                             </div>
                         </div>
 
-                    </div>
+                    </motion.div>
                 ))}
             </div>
 

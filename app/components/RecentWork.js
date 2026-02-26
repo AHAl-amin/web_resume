@@ -120,7 +120,7 @@ export default function RecentWork() {
                     >
                         <div
                             ref={(el) => (projectRefs.current[index] = el)}
-                            className={`group relative bg-gradient-to-br ${project.color}
+                            className={`group relative bg-linear-to-br ${project.color}
     backdrop-blur-xl shadow-2xl
     rounded-3xl overflow-hidden 
     transition-all duration-500 hover:scale-[1.01]

@@ -12,10 +12,21 @@ import image6 from "@/public/images/proffesion/image6.png";
 import image7 from "@/public/images/proffesion/image7.png";
 import Image from "next/image";
 import { Marquee } from "@/components/ui/marquee";
+import { motion } from "framer-motion";
 
 
 
 export default function MyProfession() {
+    const leftVariants = {
+        hidden: { opacity: 0, x: -100 },
+        visible: { opacity: 1, x: 0 }
+    };
+
+    const rightVariants = {
+        hidden: { opacity: 0, x: 100 },
+        visible: { opacity: 1, x: 0 }
+    };
+
     return (
         <section>
 
@@ -24,9 +35,14 @@ export default function MyProfession() {
 
                     {/* Left Side: Content */}
 
-
-
-                    <div className="space-y-4 text-[#FFFFFF]xl:w-2/3 w-full">
+                    <motion.div
+                        className="space-y-4 text-[#FFFFFF] xl:w-2/3 w-full"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: false, amount: 0.3 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        variants={leftVariants}
+                    >
                         <p className="luxury-roman text-base md:text-[40px] font-luxury-roman">
 
 
@@ -43,30 +59,37 @@ export default function MyProfession() {
                         <div className="flex items-center gap-8 font-luxury-roman">
                             <div>
                                 <p className="lg:text-[64px] text-[40px] font-semibold text-[#E5EFFC] flex items-center gap-2">
-                                    <CountUp start={0} end={30} duration={3} enableScrollSpy scrollSpyOnce /> <span className="text-[#CAD5E2] text-3xl font-normal">+</span>
+                                    <CountUp start={0} end={30} duration={3} /> <span className="text-[#CAD5E2] text-3xl font-normal">+</span>
                                 </p>
                                 <p className="text-[#E5EFFC]">Projects</p>
                             </div>
                             <div>
                                 <p className="lg:text-[64px] text-[40px] font-semibold text-[#E5EFFC] flex items-center gap-2">
-                                    <CountUp start={0} end={2} duration={3} enableScrollSpy scrollSpyOnce /> Years <span className="text-[#CAD5E2] text-3xl font-normal mt-2">+</span>
+                                    <CountUp start={0} end={2} duration={3} /> Years <span className="text-[#CAD5E2] text-3xl font-normal mt-2">+</span>
                                 </p>
                                 <p className="text-[#E5EFFC]">As a Designer</p>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
 
 
                     {/* Right Side: Portrait */}
 
-                    <div className="relative  aspect-square xl:w-1/3 w-full lg:h-[600px] h-auto ">
+                    <motion.div
+                        className="relative aspect-square xl:w-1/3 w-full lg:h-[600px] h-auto"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: false, amount: 0.3 }}
+                        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                        variants={rightVariants}
+                    >
                         <Image
                             src={profileImage}
                             alt="Professional Journey"
                             fill
                             className="object-contain  transition-all duration-700"
                         />
-                    </div>
+                    </motion.div>
 
 
                 </div>

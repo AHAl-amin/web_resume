@@ -33,7 +33,7 @@ export default function RahimIntriduce() {
                         initial={{ x: -200, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
                         transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
                         className="absolute top-[10%] left-[10%] md:left-[5%] z-20 flex items-center gap-2 bg-[#01182E] border border-white/10 rounded-lg px-2 py-2 backdrop-blur-md shadow-2xl justify-between lg:w-[142px] w-[100px]"
                     >
                         <svg width="50" height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,7 +51,7 @@ export default function RahimIntriduce() {
                         initial={{ x: 200, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
                         transition={{ duration: 0.8, type: "spring", bounce: 0.4, delay: 0.1 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
                         className="absolute top-[14%] right-[0%] md:right-15%] z-20 flex items-center gap-2 bg-[#01182E] border border-white/10 rounded-lg px-2 py-2 backdrop-blur-md shadow-2xl justify-between lg:w-[142px] w-[100px]">
                         <svg width="50" height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8.77461 0H40.7754C45.6274 0 49.55 3.92258 49.55 8.77461V39.5366C49.55 44.3887 45.6274 48.3113 40.7754 48.3113H8.77461C3.92258 48.3113 0 44.3887 0 39.5366V8.77461C0 3.92258 3.92258 0 8.77461 0Z" fill="#001E36" />
@@ -66,10 +66,10 @@ export default function RahimIntriduce() {
                         initial={{ x: -200, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
                         transition={{ duration: 0.8, type: "spring", bounce: 0.4, delay: 0.2 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
                         className="absolute bottom-[40%] left-[0%] md:left-[5%] z-20 flex items-center gap-2 bg-[#01182E] border border-white/10 rounded-lg px-2 py-2 backdrop-blur-md shadow-2xl justify-between lg:w-[142px] w-[100px]">
                         <svg width="32" height="48" viewBox="0 0 32 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_656_3024)">
+                            <g clipPath="url(#clip0_656_3024)">
                                 <path d="M7.85337 47.5231C12.1884 47.5231 15.7067 43.9747 15.7067 39.6026V31.6821H7.85337C3.51831 31.6821 0 35.2305 0 39.6026C0 43.9747 3.51831 47.5231 7.85337 47.5231Z" fill="#0ACF83" />
                                 <path d="M0 23.7613C0 19.3892 3.51831 15.8408 7.85337 15.8408H15.7067V31.6818H7.85337C3.51831 31.6818 0 28.1334 0 23.7613Z" fill="#A259FF" />
                                 <path d="M0 7.92049C0 3.54838 3.51831 0 7.85337 0H15.7067V15.841H7.85337C3.51831 15.841 0 12.2926 0 7.92049Z" fill="#F24E1E" />
@@ -91,7 +91,7 @@ export default function RahimIntriduce() {
                         initial={{ x: 200, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
                         transition={{ duration: 0.8, type: "spring", bounce: 0.4, delay: 0.3 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
                         className="absolute bottom-[35%] right-[5%] md:right-[0%] z-20 flex items-center gap-2 bg-[#01182E] border border-white/10 rounded-lg px-2 py-2 backdrop-blur-md shadow-2xl justify-between lg:w-[142px] w-[100px]">
                         <svg width="50" height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8.78052 0H40.7695C45.6046 0 49.55 3.90675 49.55 8.78052V39.5317C49.55 44.3668 45.6432 48.3122 40.7695 48.3122H8.78052C3.90675 48.2735 0 44.3668 0 39.493V8.78052C0 3.90675 3.90675 0 8.78052 0Z" fill="#330000" />
