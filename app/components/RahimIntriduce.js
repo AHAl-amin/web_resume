@@ -115,7 +115,7 @@ export default function RahimIntriduce() {
                     </div>
 
                     {/* Social Icons Row */}
-                    <div className="flex items-center justify-center gap-6 mt-10">
+                    <div className="flex items-center justify-center gap-6 mt-10  ">
                         <SocialIcon icon={<FaBehance />} href="#" />
                                             <SocialIcon icon={<FaLinkedinIn />} href="#" />
                                             <SocialIcon icon={<FaFacebookF />} href="#" />

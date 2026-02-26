@@ -17,16 +17,16 @@ export default function Home() {
   return (
     <main className="scroll-smooth">
       <Banner />
-      <MyProfession />
+       <MyProfession />
       <RahimIntriduce />
       <section id="professional-journey">
         <ProfessionalJourney />
       </section>
-      {/* <About /> */}
+     
       <Toolbox />
       <Skills />
       <Stats />
-      {/* <Philosophy /> */}
+      
       <section id="recent-work">
         <RecentWork />
       </section>
@@ -34,7 +34,7 @@ export default function Home() {
       <Feedback />
       <section id="contact">
         <Contact />
-      </section>
+      </section> 
     </main>
   );
 }

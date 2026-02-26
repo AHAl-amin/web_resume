@@ -98,7 +98,7 @@ export default function Banner() {
                             alt="Rahim Rehman"
                             width={480}
                             height={480}
-                            className="object-contain drop-shadow-[0_0_30px_rgba(0,0,0,0.5)]"
+                            className="object-contain drop-shadow-[0_0_30px_rgba(0,0,0,0.5)] "
                             priority
                         />
                     </motion.div>

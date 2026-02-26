@@ -3,6 +3,7 @@
 import React from "react"
 
 import { Mail, Phone, MapPin, Linkedin, Github, Facebook, Instagram, Twitter } from 'lucide-react';
+import { FaWhatsapp, FaBehance, FaLinkedinIn, FaFacebookF, FaInstagram } from 'react-icons/fa';
 import Image from "next/image";
 import profile from "@/public/images/contact-profile.png";
 import { BorderBeam } from "@/components/ui/border-beam";
@@ -22,7 +23,7 @@ export default function ContactSection() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+  
   };
 
   return (
@@ -47,7 +48,7 @@ export default function ContactSection() {
             </p>
 
             {/* Contact Details */}
-            <div className="space-y-4 mb-12">
+            <div className="space-y-4 mb-12 ">
               <div className="flex items-center gap-3 text-gray-300">
                 <Mail size={20} className="text-blue-400" />
                 <a href="mailto:rahimofficial2406@gmail.com" className="hover:text-blue-400 transition">
@@ -65,31 +66,21 @@ export default function ContactSection() {
             </div>
 
             {/* Social Links */}
-            <div>
+            <div className="">
               <p className="text-gray-400 mb-4 font-semibold">Find me on</p>
-              <div className="flex gap-4">
-                <a href="#" className="bg-gray-900 hover:bg-gray-700 transition-all duration-300 ease-in-out p-3 rounded-full">
-                  <Linkedin size={20} className="text-blue-400 hover:text-white" />
-                </a>
-                <a href="#" className="bg-gray-900 hover:bg-gray-700 transition-all duration-300 ease-in-out p-3 rounded-full">
-                  <Github size={20} className="text-blue-400 hover:text-white" />
-                </a>
-                <a href="#" className="bg-gray-900 hover:bg-gray-700 transition-all duration-300 ease-in-out p-3 rounded-full">
-                  <Facebook size={20} className="text-blue-400 hover:text-white" />
-                </a>
-                <a href="#" className="bg-gray-900 hover:bg-gray-700 transition-all duration-300 ease-in-out p-3 rounded-full">
-                  <Instagram size={20} className="text-blue-400 hover:text-white" />
-                </a>
-                <a href="#" className="bg-gray-900 hover:bg-gray-700 transition-all duration-300 ease-in-out p-3 rounded-full">
-                  <Twitter size={20} className="text-blue-400 hover:text-white" />
-                </a>
-              </div>
+            <div className="flex items-center gap-6 mt-5   ">
+                        <SocialIcon icon={<FaBehance />} href="#" />
+                                            <SocialIcon icon={<FaLinkedinIn />} href="#" />
+                                            <SocialIcon icon={<FaFacebookF />} href="#" />
+                                            <SocialIcon icon={<FaInstagram />} href="#" />
+                                            <SocialIcon icon={<FaWhatsapp />} href="#" />
+                    </div>
             </div>
           </motion.div>
 
           {/* Right Side: Contact Form */}
           <motion.div
-            className="bg-gray-900/50 backdrop-blur border border-gray-800 rounded-2xl p-8"
+            className="bg-gray-900/50 backdrop-blur border border-gray-800 rounded-2xl p-8 h-fit"
             initial={{ x: 100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: false, amount: 0.3 }}
@@ -101,7 +92,7 @@ export default function ContactSection() {
               <input
                 type="text"
                 name="name"
-                placeholder="Enter Your name"
+                placeholder="Enter your name"
                 value={formData.name}
                 onChange={handleChange}
                 className="w-full bg-transparent border-b border-gray-600 text-white placeholder:text-gray-500 pb-3 focus:border-blue-400 focus:outline-none transition"
@@ -110,7 +101,7 @@ export default function ContactSection() {
               <input
                 type="email"
                 name="email"
-                placeholder="Enter Your e-mail"
+                placeholder="Enter your e-mail"
                 value={formData.email}
                 onChange={handleChange}
                 className="w-full bg-transparent border-b border-gray-600 text-white placeholder:text-gray-500 pb-3 focus:border-blue-400 focus:outline-none transition"
@@ -163,4 +154,15 @@ export default function ContactSection() {
       </section>
     </div>
   );
+}
+
+function SocialIcon({ icon, href }) {
+    return (
+        <a
+            href={href}
+            className="w-12 h-12 rounded-full border  flex items-center justify-center text-white/50 hover:text-[#79B7FA] border-[#52BFB31F] hover:shadow-[0_0_20px_rgba(121,183,250,0.3)] transition-all duration-300 bg-[#2C4C675C] backdrop-blur-xl"
+        >
+            <span className="text-xl">{icon}</span>
+        </a>
+    );
 }
