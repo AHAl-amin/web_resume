@@ -27,11 +27,11 @@ export default function ContactSection() {
   return (
     <div className="">
       {/* Main Contact Section */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 py-24">
+      <section className="max-w-[1440px] mx-auto px-6 md:px-10 py-12 lg:py-24 mt-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
           {/* Left Side: Contact Info */}
           <div className="flex flex-col justify-start">
-            <h1 className="text-5xl md:text-6xl font-bold text-white/80 mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-['luxury'] font-bold text-white/80 mb-6 leading-tight">
               Let&apos;s bring your ideas to life together!
             </h1>
             
@@ -82,7 +82,7 @@ export default function ContactSection() {
 
           {/* Right Side: Contact Form */}
           <div className="bg-gray-900/50 backdrop-blur border border-gray-800 rounded-2xl p-8">
-            <h2 className="text-2xl font-bold text-white/80 mb-8">Get In Touch</h2>
+            <h2 className="text-2xl font-bold text-white/80 font-['luxury'] mb-8">Get In Touch</h2>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <input
@@ -136,9 +136,9 @@ export default function ContactSection() {
  
 
           {/* Large Text */}
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center pt-20">
            <div className="text-center space-y-4">
-             <h3 className="text-4xl md:text-[60px] font-bold text-[#E2E8F0] leading-tight">
+             <h3 className="text-4xl md:text-[60px] font-bold font-['luxury']  text-[#E2E8F0] leading-tight">
               Let's Design Your Website
             </h3>
             <p className="text-white/50  md:text-2xl max-w-2xl">

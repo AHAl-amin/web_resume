@@ -17,18 +17,18 @@ export default function ProfessionalJourney() {
     return (
         <section>
 
-            <section className="max-w-[1440px] mx-auto px-6 md:px-10 py-20   ">
-            <div className=" grid grid-cols-1 lg:grid-cols-2 gap- items-center border-b-2 border-[#0A427D]/60 rounded-2xl relative">
+            <section className="max-w-[1440px] mx-auto px-6 md:px-10 pt-40  ">
+            <div className=" grid grid-cols-1 lg:grid-cols-2 gap- items-center border-b-2 border-[#0A427D]/60 rounded-2xl relative md:gap-0 gap-6">
             <div className="absolute z-30 bottom-0 left-0 w-full h-[50px] bg-linear-to-t from-[#0A427D]/40 to-transparent rounded-b-2xl">
               
             </div>
                 {/* Left Side: Content */}
                 <div className="space-y-6 ">
-                    <h2 className="text-[40px] md:text-[48px] lg:text-[58px] font-bold text-white leading-tight mb-10   ">
+                    <h2 className="text-[24px] lg:pl-10 pl-0   md:text-[48px] lg:text-[58px] font-bold font-['luxury'] text-white leading-tight mb-10   ">
                         My Professional Journey
                     </h2>
 
-                    <div className="space-y-4 text-white/70 text-base md:text-lg leading-relaxed text-justify-controlled word-spacing-tight text-justify pr-4">
+                    <div className="space-y-4 lg:pl-10 pl-0 text-white/80 text-base md:text-lg leading-relaxed text-justify-controlled word-spacing-tight text-justify pr-4">
                         <p>
 
 

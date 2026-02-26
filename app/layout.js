@@ -1,7 +1,7 @@
 import { Roboto_Flex, Abril_Fatface, Marck_Script, Luxurious_Script, Luxurious_Roman, Cinzel } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+
 
 const robotoFlex = Roboto_Flex({
   subsets: ["latin"],
@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
           <main className="">
             {children}
           </main>
-          <Footer />
+         
         </div>
       </body>
     </html>

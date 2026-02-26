@@ -17,6 +17,17 @@
   --font-cinzel: var(--font-cinzel);
 }
 
+@font-face {
+  font-family: 'Luxury';
+  src: url('/luxury/Luxury.woff2') format('woff2'),
+    url('/luxury/Luxury.woff') format('woff'),
+    url('/luxury/Luxury.ttf') format('truetype'),
+    url('/luxury/Luxury.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
 
   color: var(--foreground);

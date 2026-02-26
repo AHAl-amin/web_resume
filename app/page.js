@@ -20,11 +20,11 @@ export default function Home() {
       <MyProfession />
       <RahimIntriduce />
       <ProfessionalJourney />
-      <About />
+      {/* <About /> */}
       <Toolbox />
       <Skills />
       <Stats />
-      <Philosophy />
+      {/* <Philosophy /> */}
       <RecentWork />
       <DiveDeep />
       <Feedback />

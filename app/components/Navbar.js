@@ -1,6 +1,6 @@
 
 "use client";
-import Link from "next/link";
+
 import Image from "next/image";
 import logo from "@/public/images/logo.png";
 import { MdArrowOutward } from "react-icons/md";
@@ -8,11 +8,13 @@ import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 import { useState } from "react";
 import { BorderBeam } from "@/components/ui/border-beam";
+import Link from "next/link";
 
 
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+  
 
     const navLinks = [
         { name: "Home", href: "/" },
