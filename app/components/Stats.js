@@ -36,7 +36,7 @@ export default function Stats() {
     ];
 
     return (
-        <section className="w-full max-w-[1440px] mx-auto px-6 md:px-10 py-20 space-y-20  lg:mt-30 mt-0">
+        <section className="w-full max-w-[1440px] mx-auto px-6 md:px-10 py-20 space-y-20  lg:mt-30 mt-0 overflow-x-hidden">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                 {stats.map((stat, index) => (
                     <div
@@ -100,13 +100,13 @@ export default function Stats() {
 
 
                     <div className="flex flex-col gap-3 items-start text-[#CAD5E2] ">
-                        <a href="#" className=" text-xl md:text-lg lg:text-xl hover:text-white transition-colors">
+                        <a href="#" className=" text-sm md:text-lg lg:text-xl hover:text-white transition-colors">
                             Creative Design
                         </a>
-                        <a href="#" className=" text-xl md:text-lg lg:text-xl hover:text-white transition-colors">
+                        <a href="#" className=" text-sm md:text-lg lg:text-xl hover:text-white transition-colors">
                             User Friendly Design
                         </a>
-                        <a href="#" className="text-xl md:text-lg lg:text-xl  hover:text-white transition-all">
+                        <a href="#" className="text-sm md:text-lg lg:text-xl  hover:text-white transition-all">
                             Masterful Execution
                         </a>
                     </div>

@@ -12,7 +12,7 @@ import deep3 from "../../public/images/Rectangle 143.png";
 export default function DiveDeep() {
   return (
     <section
-      className="relative w-full bg-cover bg-center lg:min-h-screen"
+      className="relative w-full bg-cover bg-center lg:min-h-screen "
       style={{ backgroundImage: `url(${divedeep.src})` }}
     >
       <div className="w-full max-w-[1440px] mx-auto px-10 lg:py-20 py-10">
@@ -27,7 +27,7 @@ export default function DiveDeep() {
           </p>
         </div>
 
-        <div className="flex justify-between lg:flex-row flex-col gap-10 xl:mt-26 lg:mt-20 mt-16">
+        <div className="flex justify-between lg:flex-row flex-col gap-10 xl:mt-26 lg:mt-20 mt-16 overflow-x-hidden">
           
           {/* 1st Image - From Left */}
           <motion.div

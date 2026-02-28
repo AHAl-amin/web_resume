@@ -51,10 +51,10 @@ const ClientFeedback = () => {
     };
 
     const floatingImages = [
-        { src: clientImage1, className: "top-[15%] left-[20%] top-[45%] w-[60px] h-[60px] md:w-14 md:h-14" },
-        { src: clientImage2, className: "top-[30%] right-[12%] top-[40%] w-[64px] h-[64px] md:w-20 md:h-20" },
-        { src: clientImage3, className: "bottom-[0%] left-[8%] w-[100px] h-[100px] md:w-36 md:h-36" },
-        { src: clientImage4, className: "bottom-[10%] right-[10%] w-[40px] h-[40px] md:w-14 md:h-14" },
+        { src: clientImage1, className: "top-[15%] left-[5%] md:left-[20%] top-[45%] w-[60px] h-[60px] md:w-14 md:h-14" },
+        { src: clientImage2, className: "top-[30%] right-[5%] md:right-[12%] top-[40%] w-[64px] h-[64px] md:w-20 md:h-20" },
+        { src: clientImage3, className: "md:bottom-[0%] bottom-[2%] left-[8%] w-[100px] h-[100px] md:w-36 md:h-36 " },
+        { src: clientImage4, className: "md:bottom-[10%] bottom-[5%] right-[10%] w-[40px] h-[40px] md:w-14 md:h-14" },
         
     ];
 
@@ -101,10 +101,10 @@ const ClientFeedback = () => {
                 {/* Left Arrow */}
                 <button
                     onClick={goToPrevious}
-                    className="group relative flex items-center justify-center w-16 h-16 rounded-full border border-blue-400/30 bg-blue-900/10 hover:bg-blue-900/20 transition-all cursor-pointer mr-6 md:mr-12 mt-30"
+                    className="group relative flex items-center justify-center md:w-16 w-10 md:h-16 h-10 rounded-full border border-blue-400/30 bg-blue-900/10 hover:bg-blue-900/20 transition-all cursor-pointer mr-6 md:mr-12 mt-30"
                 >
                     <div className="absolute inset-0 rounded-full  blur-md group-hover:bg-blue-500/40 transition-all"></div>
-                    <MoveLeft className="text-blue-400 w-6 h-6 relative z-10" />
+                    <MoveLeft className="text-blue-400 md:w-6 w-4 md:h-6 h-4 relative z-10" />
                 </button>
 
                 {/* Testimonial Text */}
@@ -122,11 +122,11 @@ const ClientFeedback = () => {
                                 <h4 className="text-white text-xl md:text-2xl font-semibold tracking-wide">
                                     {currentFeedback.name}
                                 </h4>
-                                <p className="text-blue-400 text-xl mt-1 cappitalize tracking-widest">
+                                <p className="text-blue-400 md:text-xl text-sm mt-1 cappitalize tracking-widest">
                                     {currentFeedback.title}
                                 </p>
                             </div>
-                            <p className="text-white/80 text-lg md:text-2xl leading-relaxed font-light italic mb-8 max-w-2xl mx-auto">
+                            <p className="text-white/80 text-sm md:text-2xl leading-relaxed font-light italic mb-8 max-w-2xl mx-auto">
                                 &ldquo;{currentFeedback.text}&rdquo;
                             </p>
                         </motion.div>
@@ -136,10 +136,10 @@ const ClientFeedback = () => {
                 {/* Right Arrow */}
                 <button
                     onClick={goToNext}
-                    className="group relative flex items-center justify-center w-16 h-16 rounded-full border border-blue-400/30 bg-blue-900/10 hover:bg-blue-900/20 transition-all cursor-pointer ml-6 md:ml-12 mt-30"
+                    className="group relative flex items-center justify-center md:w-16 w-10 md:h-16 h-10 rounded-full border border-blue-400/30 bg-blue-900/10 hover:bg-blue-900/20 transition-all cursor-pointer ml-6 md:ml-12 mt-30"
                 >
                     <div className="absolute inset-0 rounded-full blur-md group-hover:bg-blue-500/40 transition-all "></div>
-                    <MoveRight className="text-blue-400 w-6 h-6 relative z-10" />
+                    <MoveRight className="text-blue-400 md:w-6 w-4 md:h-6 h-4 relative z-10" />
                 </button>
             </div>
 

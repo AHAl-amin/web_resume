@@ -14,7 +14,7 @@ import Link from "next/link";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
-  
+
 
     const navLinks = [
         { name: "Home", href: "/" },
@@ -40,35 +40,35 @@ export default function Navbar() {
 
 
                 {/* Desktop CTA */}
-              <div className="flex items-center gap-10">
-                {/* Desktop Menu */}
-                <ul className="hidden md:flex gap-8 text-white text-[18px]">
-                    {navLinks.map((link) => (
-                        <li key={link.name}>
-                            <Link
-                                href={link.href}
-                                className="hover:text-[#79B7FA] transition-colors"
-                            >
-                                {link.name}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
-                  <div className="hidden md:block">
-                    <Link href="#contact">
-                      <button className="relative overflow-hidden flex items-center gap-2 px-8 py-2.5 rounded-full bg-linear-to-r from-[#0A427D]/40 via-transparent to-[#0A427D]/40 text-white font-medium text-sm  border border-white/10 cursor-pointer group">
-                          <span className="relative z-10 flex items-center gap-2">
-                              Hire Me
-                              <MdArrowOutward className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                          </span>
+                <div className="flex items-center gap-10">
+                    {/* Desktop Menu */}
+                    <ul className="hidden md:flex gap-8 text-white text-[18px]">
+                        {navLinks.map((link) => (
+                            <li key={link.name}>
+                                <Link
+                                    href={link.href}
+                                    className="hover:text-[#79B7FA] transition-colors"
+                                >
+                                    {link.name}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                    <div className="hidden md:block">
+                        <Link href="#contact">
+                            <button className="relative overflow-hidden flex items-center gap-2 px-8 py-2.5 rounded-full bg-linear-to-r from-[#0A427D]/40 via-transparent to-[#0A427D]/40 text-white font-medium text-sm  border border-white/10 cursor-pointer group">
+                                <span className="relative z-10 flex items-center gap-2">
+                                    Hire Me
+                                    <MdArrowOutward className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                                </span>
 
 
 
-                          <BorderBeam duration={8} size={100} colorFrom="#41A1EF" colorTo="#0A427D" anchor="left" />
-                      </button>
-                    </Link>
+                                <BorderBeam duration={8} size={100} colorFrom="#41A1EF" colorTo="#0A427D" anchor="left" />
+                            </button>
+                        </Link>
+                    </div>
                 </div>
-              </div>
 
                 {/* Mobile Menu Toggle */}
                 <button
@@ -80,7 +80,7 @@ export default function Navbar() {
 
                 {/* Mobile Menu */}
                 <div
-                    className={`fixed top-20 right-4 left-4 p-6 rounded-2xl bg-black z-40 flex flex-col items-center transition-all duration-500 md:hidden
+                    className={`fixed top-20 max-w-md right-4 left-4 p-6 rounded-2xl bg-black z-40 flex flex-col items-center transition-all duration-500 md:hidden
           ${isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5 pointer-events-none"}`}
                 >
                     <ul className="flex flex-col items-center gap-4 text-white text-[24px]">
@@ -98,14 +98,16 @@ export default function Navbar() {
                     </ul>
 
                     <Link href="#contact">
-                      <button className="relative mt-3 flex items-center gap-2 px-8 py-2.5 rounded-full bg-linear-to-r from-[#0A427D]/40 via-transparent to-[#0A427D]/40 text-white font-medium text-sm overflow-hidden border border-white/10 cursor-pointer group">
-                          <span className="relative z-10 flex items-center gap-2">
-                              Hire Me
-                              <MdArrowOutward className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                          </span>
+                        <button className="relative mt-3 flex items-center gap-2 px-8 py-2.5 rounded-full bg-linear-to-r from-[#0A427D]/40 via-transparent to-[#0A427D]/40 text-white font-medium text-sm overflow-hidden border border-white/10 cursor-pointer group"
+                        onClick={() => setIsOpen(false)}
+                        >
+                            <span className="relative z-10 flex items-center gap-2">
+                                Hire Me
+                                <MdArrowOutward className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                            </span>
 
-                          <BorderBeam duration={8} size={100} colorFrom="#41A1EF" colorTo="#0A427D" anchor='left' />
-                      </button>
+                            <BorderBeam duration={8} size={100} colorFrom="#41A1EF" colorTo="#0A427D" anchor='left' />
+                        </button>
                     </Link>
                 </div>
             </div>

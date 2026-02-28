@@ -30,7 +30,7 @@ export default function ProfessionalJourney() {
     return (
         <section>
 
-            <section className="max-w-[1440px] mx-auto px-6 md:px-10 pt-40  ">
+            <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:pt-40 pt-10 overflow-x-hidden ">
             <div className=" grid grid-cols-1 lg:grid-cols-2 gap- items-center border-b-2 border-[#0A427D]/60 rounded-2xl relative md:gap-0 gap-6">
             <div className="absolute z-30 bottom-0 left-0 w-full h-[50px] bg-linear-to-t from-[#0A427D]/40 to-transparent rounded-b-2xl">
               
@@ -48,7 +48,7 @@ export default function ProfessionalJourney() {
                         My Professional Journey
                     </h2>
 
-                    <div className="space-y-4 lg:pl-10 pl-0 text-white/80 text-base md:text-lg leading-relaxed text-justify-controlled word-spacing-tight text-justify pr-4">
+                    <div className="space-y-4 lg:pl-10 pl-0 text-white/80 text-sm md:text-lg leading-relaxed text-justify-controlled word-spacing-tight text-justify pr-4">
                         <p>
 
 

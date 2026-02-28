@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <main className="scroll-smooth">
       <Banner />
-       <MyProfession />
+       {/* <MyProfession /> */}
       <RahimIntriduce />
       <section id="professional-journey">
         <ProfessionalJourney />
