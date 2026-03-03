@@ -1,6 +1,6 @@
 'use client';
 
-import React from "react"
+import React, { useState } from "react"
 
 import { Mail, Phone, MapPin, Linkedin, Github, Facebook, Instagram, Twitter } from 'lucide-react';
 import { FaWhatsapp, FaBehance, FaLinkedinIn, FaFacebookF, FaInstagram } from 'react-icons/fa';
@@ -8,9 +8,11 @@ import Image from "next/image";
 import profile from "@/public/images/contact-profile.png";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { motion } from "framer-motion";
+import { toast, Toaster } from "sonner";
 
 export default function ContactSection() {
-  const [formData, setFormData] = React.useState({
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
@@ -21,10 +23,49 @@ export default function ContactSection() {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setLoading(true);
 
-  };
+  try {
+    await emailjs.send(
+      "YOUR_SERVICE_ID",
+      "YOUR_TEMPLATE_ID",
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+      },
+      "YOUR_PUBLIC_KEY"
+    );
+
+   toast.success("Message sent successfully!", {
+
+
+     style: {
+      background: "#16a34aa6", // green-600
+      color: "#ffffff",
+      border: "1px solid #16a34a",
+    },
+
+
+  });
+    setFormData({ name: "", email: "", message: "" });
+
+  } catch (error) {
+    toast.error("Failed to send message try again later.", {
+
+     style: {
+      background: "#db1f1f8f", // red-600
+      color: "#ffffff",
+      border: "1px solid #dc2626",
+    },
+  
+  });
+  }
+
+  setLoading(false);
+};
 
   return (
     <div className="">
@@ -116,10 +157,12 @@ export default function ContactSection() {
                 className="w-full bg-transparent border-b border-gray-600 text-white placeholder:text-gray-500 pb-3 focus:border-blue-400 focus:outline-none transition resize-none"
               />
 
-              <button className="relative mt-3 flex items-center gap-2 px-8 py-4 rounded-full bg-linear-to-r from-[#0A427D]/40 via-transparent to-[#0A427D]/40 text-white font-medium text-sm overflow-hidden border border-white/10 cursor-pointer group">
-                <span className="relative z-10 flex items-center gap-2">
-                  Send
-                </span>
+              <button
+                type="submit"
+                disabled={loading}
+                className="relative mt-3 flex items-center gap-2 px-8 py-4 rounded-full bg-linear-to-r from-[#0A427D]/40 via-transparent to-[#0A427D]/40 text-white font-medium text-sm overflow-hidden border border-white/10 cursor-pointer group disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {loading ? "Sending..." : "Send"}
 
                 <BorderBeam
                   duration={6}
@@ -152,6 +195,8 @@ export default function ContactSection() {
         </div>
 
       </section>
+
+      <Toaster position="top-right" />
     </div>
   );
 }

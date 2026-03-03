@@ -77,7 +77,7 @@ export default function RecentWork() {
             mockup: cardimg2,
             title: '',
             subtitle: 'AI-Powered Personalized Travel Itinerary Mobile App',
-            tags: ['View Work', 'Live Link'],
+            tags: ['View Work', 'Coming Soon'],
             color: 'from-[#8b5a3c]/40 to-[#5a3a2a]/40',
             borderColor: 'border-[#ff8c42]/20',
         },
@@ -99,7 +99,7 @@ export default function RecentWork() {
             mockup: cardimg4,
             title: '',
             subtitle: 'Guided Meditation Website for Daily Calm & Mental Wellness',
-            tags: ['View Project'],
+            tags: ['View Project','Coming Soon'],
             color: 'from-[#1a4d6d]/40 to-[#0a2d4d]/40',
             borderColor: 'border-[#79B7FA]/20',
         },
@@ -121,11 +121,11 @@ export default function RecentWork() {
                         <div
                             ref={(el) => (projectRefs.current[index] = el)}
                             className={`group relative bg-linear-to-br ${project.color}
-    backdrop-blur-xl shadow-2xl
-    rounded-3xl overflow-hidden 
-    transition-all duration-500 hover:scale-[1.01]
-    px-6 md:px-10 py-10 ${project.id === 3 ? ' pb-0 ' : '' || project.id === 4 ? ' pb-0 ' : ''}`}
-                        >
+                               backdrop-blur-xl shadow-2xl
+                                rounded-3xl overflow-hidden 
+                               transition-all duration-500 hover:scale-[1.01]
+                               px-6 md:px-10 py-10 ${project.id === 3 ? ' pb-0 ' : '' || project.id === 4 ? ' pb-0 ' : ''}`}
+                            >
                             {/* Background image */}
                             <div
                                 className="absolute inset-0 "
@@ -172,7 +172,7 @@ export default function RecentWork() {
 
                                         </div>
                                         <div className="flex items-center gap-2 text-blue-400 bg-[#11434366] font-semibold group-hover:gap-3 transition-all cursor-pointer w-fit px-4 py-2 rounded-full border border-[#40C6DA]">
-                                            <span className="text-sm text-[#97EAEA]">Live Link</span>
+                                            <span className="text-sm text-[#97EAEA]">{project.tags[1]}</span>
 
 
                                         </div>

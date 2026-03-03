@@ -85,9 +85,9 @@ export default function Toolbox() {
                 <h2 className="text-[24px] md:text-[48px] lg:text-[56px] font-semibold font-['luxury'] text-white  max-w-2xl leading-tight">
                     Delivering Value Through My Skills
                 </h2>
-                <p className="text-white/80 text-base md:text-lg max-w-lg  text-start">
+                {/* <p className="text-white/80 text-base md:text-lg max-w-lg  text-start">
                    I offer a range of professional services designing to meet your business needs with precision and creativity
-                </p>
+                </p> */}
             </div>
 
             {/* Service Cards */}
