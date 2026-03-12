@@ -49,7 +49,7 @@ export default function Skills() {
                     {projectImages.map((image, index) => (
                         <div
                             key={index}
-                            className="bg-white/5 rounded-[22px] transition-all group overflow-hidden relative mx-3 shrink-0"
+                            className="bg-white/5 rounded-[20px] transition-all group overflow-hidden relative mx-3 shrink-0"
                         >
                             <div className=""></div>
                             <Image
@@ -57,7 +57,7 @@ export default function Skills() {
                                 alt={`Project ${index + 1}`}
                                 width={image.width}
                                 height={image.height}
-                                className="h-[300px] md:h-[450px] w-auto transition-transform duration-700 "
+                                className="h-[300px] md:h-[450px] w-auto transition-transform duration-700 scale-101 "
                             />
                         </div>
                     ))}

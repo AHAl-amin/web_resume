@@ -81,7 +81,7 @@ export default function ProfessionalJourney() {
                             src={profileImage}
                             alt="Professional Journey"
                             fill
-                            className="object-contain rounded-[32px]   transition-all duration-700"
+                            className="object-contain rounded-4xl   transition-all duration-700"
                         />
                     </div>
                 </motion.div>
@@ -96,7 +96,7 @@ export default function ProfessionalJourney() {
                             src={image1}
                             alt="Professional Journey"
                             fill
-                            className="object-cover rounded-[32px]"
+                            className="object-cover rounded-4xl"
                         />
                     </div>
                     <div className="relative w-[400px] h-[300px]">
@@ -104,7 +104,7 @@ export default function ProfessionalJourney() {
                             src={image2}
                             alt="Professional Journey"
                             fill
-                            className="object-cover rounded-[32px]"
+                            className="object-cover rounded-4xl"
                         />
                     </div>
                     <div className="relative w-[400px] h-[300px]">
@@ -112,7 +112,7 @@ export default function ProfessionalJourney() {
                             src={image3}
                             alt="Professional Journey"
                             fill
-                            className="object-cover rounded-[32px]"
+                            className="object-cover rounded-4xl"
                         />
                     </div>
                     <div className="relative w-[400px] h-[300px]">
@@ -120,7 +120,7 @@ export default function ProfessionalJourney() {
                             src={image4}
                             alt="Professional Journey"
                             fill
-                            className="object-cover rounded-[32px]"
+                            className="object-cover rounded-4xl"
                         />
                     </div>
                     <div className="relative w-[400px] h-[300px]">
@@ -128,7 +128,7 @@ export default function ProfessionalJourney() {
                             src={image5}
                             alt="Professional Journey"
                             fill
-                            className="object-cover rounded-[32px]"
+                            className="object-cover rounded-4xl"
                         />
                     </div>
                     <div className="relative w-[400px] h-[300px]">
@@ -136,7 +136,7 @@ export default function ProfessionalJourney() {
                             src={image6}
                             alt="Professional Journey"
                             fill
-                            className="object-cover rounded-[32px]"
+                            className="object-cover rounded-4xl"
                         />
                     </div>
                     <div className="relative w-[400px] h-[300px]">
@@ -144,7 +144,7 @@ export default function ProfessionalJourney() {
                             src={image7}
                             alt="Professional Journey"
                             fill
-                            className="object-cover rounded-[32px]"
+                            className="object-cover rounded-4xl"
                         />
                     </div>
                 </Marquee>

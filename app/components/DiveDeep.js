@@ -27,7 +27,7 @@ export default function DiveDeep() {
           </p>
         </div>
 
-        <div className="flex justify-between lg:flex-row flex-col gap-10 xl:mt-26 lg:mt-20 mt-16 overflow-x-hidden">
+        <div className="flex justify-between lg:flex-row flex-col gap-10 xl:mt-26 lg:mt-20 mt-16 overflow-hidden">
           
           {/* 1st Image - From Left */}
           <motion.div

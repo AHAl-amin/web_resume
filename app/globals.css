@@ -15,6 +15,7 @@
   --font-luxury: var(--font-luxury-script);
   --font-luxury-roman: var(--font-luxury-roman);
   --font-cinzel: var(--font-cinzel);
+  --font-poppins: var(--font-poppins);
 }
 
 @font-face {

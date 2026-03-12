@@ -63,7 +63,7 @@ export default function Stats() {
                             </div>
 
                         </div>
-                        <h4 className="text-lg md:text-xl font-medium font-['luxury'] text-white mb-2">{stat.label}</h4>
+                        <h4 className="text-lg md:text-xl font-medium font-poppins text-white mb-2">{stat.label}</h4>
                         <p className="text-[#90A1B9] max-w-[250px] text-sm leading-relaxed">{stat.desc}</p>
                         <BorderBeam duration={8} size={100} colorFrom="#41A1EF" colorTo="#0A427D" />
                     </div>

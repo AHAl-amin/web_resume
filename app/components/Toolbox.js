@@ -12,6 +12,10 @@ import { motion } from "framer-motion";
 
 
 export default function Toolbox() {
+
+  
+
+
     const tools = [
         {
             name: "Figma",
@@ -41,16 +45,16 @@ export default function Toolbox() {
 
       const services = [
             {
+                title: "Landing Page Design",
+                desc: "I specialize in crafting impactful landing pages that engage visitors instantly, guiding them through an intuitive experience and ensuring high conversion rates. Your brand’s first impression, perfectly executed.",
+            },
+            {
                 title: "Mobile App Design",
-                desc: "Focus on user-friendly interface, seamless usability, and brand consistency that keeps users engaged.",
+                desc: "I specialize in creating intuitive, visually stunning mobile app interfaces for iOS and Android. From user flows and wireframes to pixel-perfect UI designs.",
             },
             {
-                title: "Web Design",
-                desc: "Design high conversion landing pages, multi-page websites, and modern landing pages with top-notch performance and user-centric approach.",
-            },
-            {
-                title: "Dashboard Design",
-                desc: "Expertly craft intuitive data dashboards that provide actionable insights across various platforms with great scalability and user-friendly visuals.",
+                title: "Web App Design",
+                desc: "Designing sophisticated web applications that prioritize user interaction and scalability. My designs turn complex data into user-friendly dashboards, optimizing workflows and driving smarter business decisions.",
             }
         ];
 
@@ -103,7 +107,7 @@ export default function Toolbox() {
                                             custom={index}
                     >
                         <div className="flex-1">
-                            <h3 className="text-2xl md:text-3xl font-medium text-white mb-4 font-['luxury'] group-hover:text-[#79B7FA] transition-colors">
+                            <h3 className="text-2xl md:text-3xl font-medium text-white mb-4 font-poppins   group-hover:text-[#79B7FA] transition-colors">
                                 {service.title}
                             </h3>
                             <p className="text-white/60 text-base md:text-lg max-w-2xl group-hover:text-white/70 transition-colors">
@@ -112,8 +116,8 @@ export default function Toolbox() {
                         </div>
                         <div className="p-[1px] rounded-full bg-linear-to-r from-[#5A78EE] to-[#0CA8B6] transition-all duration-500 group-hover:from-[#0CA8B6] group-hover:to-[#5A78EE]">
                             <div className="lg:w-12 lg:h-12 md:w-14 md:h-14 w-10 h-10 rounded-full flex items-center justify-center
-      group-hover:bg-linear-to-br group-hover:from-[#0A427D]/50 group-hover:to-[#3456DC]/50 bg-black
-      text-white/60 group-hover:text-white transition-all duration-500 cursor-pointer">
+                            group-hover:bg-linear-to-br group-hover:from-[#0A427D]/50 group-hover:to-[#3456DC]/50 bg-black
+                      text-white/60 group-hover:text-white transition-all duration-500 cursor-pointer">
                                 <FiArrowUpRight className="lg:text-2xl text-[12px]" />
                             </div>
                         </div>

@@ -123,11 +123,11 @@ export default function Banner() {
 
             </div>
             <div className=" absolute bottom-5 w-full  bg-[#000000]   flex items-center">
-                <Marquee className="py-4" pauseOnHover repeat={6} >
+                <Marquee className="pt-6" pauseOnHover repeat={6} >
                     {tags.map((tag, index) => (
-                        <div key={index} className="flex items-center gap-3 mx-4">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#E2E8F0]/50" />
-                            <span className="text-[#E2E8F0]/50  text-sm md:text-base font-bold whitespace-nowrap uppercase tracking-wider">{tag}</span>
+                        <div key={index} className="flex items-center gap-3 mx-4 ">
+                            <span className="w-1.5 h-1.5 rounded-full text-[#E2E8F0] bg-[#E2E8F0]/50" />
+                            <span className="text-[#E2E8F0]  text-lg md:text-xl font-bold whitespace-nowrap uppercase tracking-wider">{tag}</span>
                         </div>
                     ))}
                 </Marquee>
