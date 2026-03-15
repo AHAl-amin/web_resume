@@ -55,10 +55,10 @@ export default function Navbar() {
                         ))}
                     </ul>
                     <div className="hidden md:block">
-                        <Link href="#contact">
+                        <Link href="https://drive.google.com/file/d/1M2ASLszmr64L_InDjKcc143opjjJ85Qt/view?usp=sharing" target="_blank">
                             <button className="relative overflow-hidden flex items-center gap-2 px-8 py-2.5 rounded-full bg-linear-to-r from-[#0A427D]/40 via-transparent to-[#0A427D]/40 text-white font-medium text-sm  border border-white/10 cursor-pointer group">
                                 <span className="relative z-10 flex items-center gap-2">
-                                    Hire Me
+                                    Resume
                                     <MdArrowOutward className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                                 </span>
 

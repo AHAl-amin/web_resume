@@ -30,7 +30,7 @@ export default function Banner() {
 
 
                 {/* Main Content Container */}
-                <div className=" h-full flex flex-col items-center justify-center w-full   ">
+                <div className=" h-full flex flex-col items-center justify-center w-full font-  ">
 
                     {/* Main Title Center-Top */}
                     <div className="absolute  2xl:top-[20%]  lg:top-[20%] top-[15%] text-center ">
@@ -38,7 +38,7 @@ export default function Banner() {
                             <svg width="35" height="27" viewBox="0 0 35 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 0V2.5C0 9.41667 3.68333 15.4667 9.16667 18.8333V26.6667H34.1667V23.3333C34.1667 18.9 25.2833 16.6667 20.8333 16.6667H20.4167C12.5 16.6667 5.83333 10 5.83333 2.5V0M20.8333 0C19.0652 0 17.3695 0.702379 16.1193 1.95262C14.869 3.20286 14.1667 4.89856 14.1667 6.66667C14.1667 8.43478 14.869 10.1305 16.1193 11.3807C17.3695 12.631 19.0652 13.3333 20.8333 13.3333C22.6014 13.3333 24.2971 12.631 25.5474 11.3807C26.7976 10.1305 27.5 8.43478 27.5 6.66667C27.5 4.89856 26.7976 3.20286 25.5474 1.95262C24.2971 0.702379 22.6014 0 20.8333 0Z" fill="#E2E8F0" />
                             </svg>
-                            <p className=" text-[#E2E8F0]">
+                            <p className=" text-[#E2E8F0] font-[josefin-slab] tracking-[4px]">
                                 Hey, This Is Rahim Rehman Here
                             </p>
 
@@ -87,7 +87,7 @@ export default function Banner() {
 
                     {/* Profile Image (Centered & Higher Z-index) */}
                     <motion.div
-                        className="absolute -bottom-20"
+                        className="absolute -bottom-5"
                         initial={{ y: 120, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: false, amount: 0.3 }}
@@ -96,8 +96,8 @@ export default function Banner() {
                         <Image
                             src={profileImage}
                             alt="Rahim Rehman"
-                            width={480}
-                            height={480}
+                            width={440}
+                            height={656}
                             className="object-contain drop-shadow-[0_0_30px_rgba(0,0,0,0.5)] "
                             priority
                         />
@@ -122,7 +122,7 @@ export default function Banner() {
 
 
             </div>
-            <div className=" absolute bottom-5 w-full  bg-[#000000]   flex items-center">
+            <div className=" absolute bottom-5 w-full pb-2   bg-linear-to-b from-[#050D1B00] to-[#050D1B]   flex items-center">
                 <Marquee className="pt-6" pauseOnHover repeat={6} >
                     {tags.map((tag, index) => (
                         <div key={index} className="flex items-center gap-3 mx-4 ">

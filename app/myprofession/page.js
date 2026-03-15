@@ -10,6 +10,7 @@ import image4 from "@/public/images/proffesion/image4.png";
 import image5 from "@/public/images/proffesion/image5.png";
 import image6 from "@/public/images/proffesion/image6.png";
 import image7 from "@/public/images/proffesion/image7.png";
+import bg from "@/public/images/myProfessionalBanner.png";
 import Image from "next/image";
 import { Marquee } from "@/components/ui/marquee";
 import { motion } from "framer-motion";
@@ -28,12 +29,33 @@ export default function MyProfession() {
     };
 
     return (
-        <section>
+        <section className="relative">
 
-            <section className="max-w-[1440px] mx-auto flex px-6 md:px-10 h-screen py-20">
+                <div className="absolute inset-0 -z-10  w-full h-full mx-auto"
+                    style={{
+                        backgroundImage: `url(${bg.src})`, backgroundSize: 'cover', backgroundPosition: 'center'
+                    }}  >
+
+                </div>
+            <section className=" max-w-[1440px] mx-auto flex px-6 md:px-10  overflow-x-hidden  pt-30">
                 <div className="flex lg:flex-row flex-col items-center gap-8">
 
                     {/* Left Side: Content */}
+                         <motion.div
+                        className="relative aspect-square xl:w-1/3 w-full lg:h-[600px] h-auto "
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: false, amount: 0.3 }}
+                        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                        variants={rightVariants}
+                    >
+                        <Image
+                            src={profileImage}
+                            alt="Professional Journey"
+                            fill
+                            className="object-contain  transition-all duration-700 "
+                        />
+                    </motion.div>
 
                     <motion.div
                         className="space-y-4 text-[#FFFFFF] xl:w-2/3 w-full"
@@ -73,23 +95,8 @@ export default function MyProfession() {
                     </motion.div>
 
 
-                    {/* Right Side: Portrait */}
 
-                    <motion.div
-                        className="relative aspect-square xl:w-1/3 w-full lg:h-[600px] h-auto"
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: false, amount: 0.3 }}
-                        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-                        variants={rightVariants}
-                    >
-                        <Image
-                            src={profileImage}
-                            alt="Professional Journey"
-                            fill
-                            className="object-contain  transition-all duration-700"
-                        />
-                    </motion.div>
+               
 
 
                 </div>

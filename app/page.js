@@ -17,13 +17,13 @@ export default function Home() {
   return (
     <main className="scroll-smooth">
       <Banner />
-       {/* <MyProfession /> */}
-      <RahimIntriduce />
+       <MyProfession />
+      <Toolbox />
       <section id="professional-journey">
         <ProfessionalJourney />
       </section>
+      <RahimIntriduce />
      
-      <Toolbox />
       <Skills />
       <Stats />
       

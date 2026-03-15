@@ -72,7 +72,7 @@ export default function Toolbox() {
     };
 
     return (
-        <section className="relative w-full  py-30 xl:mt-30 lg:mt-12 md:mt-10 mt-0 md:mb-0 mb-20 h-screen">
+        <section className="relative w-full  py-30 lg:my-20 md:my-10 my-5   h-screen   ">
 
 
             <video
@@ -83,15 +83,16 @@ export default function Toolbox() {
                 loop
                 muted
             ></video>
+            
+            {/* Bottom Gradient Overlay */}
+            <div className="absolute bottom-0 left-0 w-full h-[50px] bg-linear-to-t from-[#000000] to-transparent pointer-events-none -z-10"></div>
                          <section className="w-full max-w-[1440px] mx-auto px-6 md:px-10 pb-20 overflow-hidden">
             {/* Header */}
             <div className="flex flex-col lg:flex-row justify-between items-start lg:gap-10 md:gap-2 gap-2 lg:mb-16">
                 <h2 className="text-[24px] md:text-[48px] lg:text-[56px] font-semibold font-['luxury'] text-white  max-w-2xl leading-tight">
                     Delivering Value Through My Skills
                 </h2>
-                {/* <p className="text-white/80 text-base md:text-lg max-w-lg  text-start">
-                   I offer a range of professional services designing to meet your business needs with precision and creativity
-                </p> */}
+               
             </div>
 
             {/* Service Cards */}
@@ -99,7 +100,7 @@ export default function Toolbox() {
                 {services.map((service, index) => (
                     <motion.div
                         key={index}
-                        className={`group lg:py-6 md:py-2 py-2 flex  justify-between items-start md:items-center lg:gap-6 md:gap-2 gap-2 transition-all hover:bg-white/2   ${index === 0 ? "border-t border-white/10" : "" || index === 1 ? "border-t border-white/10" : "" || index === 2 ? "border-t border-white/10 " : ""}`}
+                        className={`group lg:py-6 md:py-2 py-2 flex  justify-between items-start md:items-center lg:gap-6 md:gap-2 gap-2 transition-all    ${index === 0 ? "border-t border-white/10" : "" || index === 1 ? "border-t border-white/10" : "" || index === 2 ? "border-t border-white/10 " : ""}`}
                                             initial="hidden"
                                             whileInView="visible"
                                             viewport={{ once: false, amount: 0.5 }}
