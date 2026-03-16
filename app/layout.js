@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
         className={`${robotoFlex.variable} ${abrilFatface.variable} ${marckScript.variable} ${luxuryScript.variable} ${luxuryRoman.variable} ${cinzel.variable} ${poppins.variable}  bg-[#000000] text-white antialiased overflow-x-hidden`}
       >
         <div className="relative">
-          <div className="absolute top-40 right-0  h-[700px] w-[600px] bg-[radial-gradient(circle,#035AB7,#072340)] rounded-full opacity-40 blur-[180px] pointer-events-none overflow-x-hidden"></div>
+          <div className="xl:block hidden absolute xl:top-40 lg:top-30  right-0  h-[700px] w-[600px]  bg-[radial-gradient(circle,#035AB7,#072340)] rounded-full opacity-40 blur-[180px] pointer-events-none overflow-x-hidden"></div>
           <Navbar />
           <main className="">
             {children}

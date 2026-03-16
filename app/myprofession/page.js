@@ -32,8 +32,8 @@ export default function MyProfession() {
         <section className="relative">
 
                
-            <section className=" max-w-[1440px] mx-auto flex px-6 md:px-10  overflow-x-hidden   py-20">
-                <div className="flex lg:flex-row flex-col items-center gap-8">
+            <section className=" max-w-[1440px] mx-auto flex px-6  md:px-10   overflow-x-hidden   py-20">
+                <div className="flex lg:flex-row flex-col items-center ">
 
                     {/* Left Side: Content */}
                          <motion.div

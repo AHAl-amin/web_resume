@@ -33,7 +33,7 @@ export default function Skills() {
 
         
             {/* Project Showcase Carousel */}
-            <div className=" bg-[#061422] py-10">
+            <div className=" bg-[#061422] py-10 mt-10 lg:mt-20">
                 {/* Top Text Marquee */}
                 <Marquee className="py-2" pauseOnHover repeat={6} reverse>
                     {tags.map((tag, index) => (

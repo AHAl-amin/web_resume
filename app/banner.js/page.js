@@ -17,9 +17,9 @@ export default function Banner() {
 
             {/* Decorative Circle */}
 
-            <div className="relative h-screen w-full flex justify-center overflow-hidden  max-w-[1440px] mx-auto px-10   ">
+            <div className="relative h-screen  w-full  flex justify-center overflow-hidden  max-w-[1440px] mx-auto px-10   ">
                 <div
-                    className="absolute inset-0 z-0 opacity-40 w-1/2 mx-auto"
+                    className="absolute inset-0 z-0 opacity-40 w-1/2   mx-auto"
                     style={{
                         backgroundImage: `url(${bannerImage.src})`,
                         backgroundSize: "cover",
