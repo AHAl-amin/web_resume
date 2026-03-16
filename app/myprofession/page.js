@@ -31,13 +31,8 @@ export default function MyProfession() {
     return (
         <section className="relative">
 
-                <div className="absolute inset-0 -z-10  w-full h-full mx-auto"
-                    style={{
-                        backgroundImage: `url(${bg.src})`, backgroundSize: 'cover', backgroundPosition: 'center'
-                    }}  >
-
-                </div>
-            <section className=" max-w-[1440px] mx-auto flex px-6 md:px-10  overflow-x-hidden  pt-30">
+               
+            <section className=" max-w-[1440px] mx-auto flex px-6 md:px-10  overflow-x-hidden   py-20">
                 <div className="flex lg:flex-row flex-col items-center gap-8">
 
                     {/* Left Side: Content */}

@@ -72,7 +72,7 @@ export default function Toolbox() {
     };
 
     return (
-        <section className="relative w-full  py-30 lg:my-20 md:my-10 my-5   h-screen   ">
+        <section className="relative w-full  py-30 lg:my-20 md:my-10 my-5     h-screen   ">
 
 
             <video

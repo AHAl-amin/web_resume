@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 export default function RahimIntriduce() {
     return (
-        <section className=" overflow-hidden  xl:pb-40 pb-60 ">
+        <section className=" overflow-hidden  xl:pb-40 pb-80 ">
             <div className="max-w-[1200px] mx-auto px-6 flex flex-col items-center relative">
 
                 {/* Profile Section with Floating Badges */}

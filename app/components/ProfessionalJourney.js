@@ -30,7 +30,7 @@ export default function ProfessionalJourney() {
     return (
         <section>
 
-            <section className="max-w-[1440px] mx-auto px-6 md:px-10 lg:pt-10 pt-20 overflow-x-hidden ">
+            <section className="max-w-[1440px]   mx-auto px-6 md:px-10 lg:pt-10 pt-20 overflow-x-hidden ">
             <div className="group grid grid-cols-1 lg:grid-cols-2 gap- items-center rounded-2xl relative md:gap-0 gap-6">
             <div className="absolute z-30 bottom-0 left-0 w-full h-[50px] bg-linear-to-t from-[#0A427D]/40 to-transparent rounded-b-2xl border-b-2 border-[#0A427D]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               
