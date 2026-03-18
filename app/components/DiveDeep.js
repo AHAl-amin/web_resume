@@ -12,7 +12,7 @@ import deep3 from "../../public/images/Rectangle 143.png";
 export default function DiveDeep() {
   return (
     <section
-      className="relative w-full bg-cover bg-center lg:min-h-screen "
+      className="relative w-full   lg:min-h-screen   "
       style={{ backgroundImage: `url(${divedeep.src})` }}
     >
       <div className="w-full max-w-[1440px] mx-auto px-10 lg:py-20 py-10">

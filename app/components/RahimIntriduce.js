@@ -14,8 +14,7 @@ export default function RahimIntriduce() {
                 {/* Profile Section with Floating Badges */}
                 <div className="relative w-full max-w-3xl aspect-square flex items-center justify-center  ">
                     {/* Background Radial Gradient */}
-                    <div className="absolute hidden lg:block lg:h-[400px] md:h-[300px] h-[200px] lg:w-[400px] md:w-[300px] w-[200px] rounded-full
-                                bg-[radial-gradient(circle,#035AB7_0%,transparent_100%)] blur-[150px] lg:top-20 md:top-10 ">
+                    <div className="absolute hidden lg:block lg:h-[400px] md:h-[300px] h-[200px] lg:w-[400px] md:w-[300px] w-[200px] rounded-full bg-[radial-gradient(circle,#035AB7_0%,transparent_100%)] blur-[150px] lg:top-20 md:top-10 ">
                     </div>
 
                     <div className="relative w-full h-2/3   ">

@@ -1,6 +1,7 @@
 import { Roboto_Flex, Abril_Fatface, Marck_Script, Luxurious_Script, Luxurious_Roman, Cinzel, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import ScrollToTop from "./components/ScrollToTop";
 
 
 const robotoFlex = Roboto_Flex({
@@ -54,7 +55,8 @@ export default function RootLayout({ children }) {
         className={`${robotoFlex.variable} ${abrilFatface.variable} ${marckScript.variable} ${luxuryScript.variable} ${luxuryRoman.variable} ${cinzel.variable} ${poppins.variable}  bg-[#000000] text-white antialiased overflow-x-hidden`}
       >
         <div className="relative">
-          <div className="xl:block hidden absolute xl:top-40 lg:top-30  right-0  h-[700px] w-[600px]  bg-[radial-gradient(circle,#035AB7,#072340)] rounded-full opacity-40 blur-[180px] pointer-events-none overflow-x-hidden"></div>
+          <div className="xl:block hidden absolute xl:top-40 lg:top-30  right-0  h-[600px] w-[600px] bg-[radial-gradient(circle,#072340_0%,transparent_100%)] opacity-40 blur-2xl rounded-full  overflow-x-hidden"></div>
+          <ScrollToTop />
           <Navbar />
           <main className="">
             {children}

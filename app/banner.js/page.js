@@ -122,7 +122,7 @@ export default function Banner() {
 
 
             </div>
-            <div className=" absolute bottom-5 w-full pb-2   bg-linear-to-b from-[#050D1B00] to-[#050D1B]   flex items-center">
+            <div className=" absolute bottom-0 w-full pb-2   bg-linear-to-b from-[#050D1B00] to-[#050D1B]   flex items-center">
                 <Marquee className="pt-6" pauseOnHover repeat={6} >
                     {tags.map((tag, index) => (
                         <div key={index} className="flex items-center gap-3 mx-4 ">
