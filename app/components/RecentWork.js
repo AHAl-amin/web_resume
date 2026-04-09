@@ -67,6 +67,9 @@ export default function RecentWork() {
             title: '',
             subtitle: 'A Powerful IT Reseller Website with AI-Powered Support & Instant Quote System',
             tags: ['View Work', 'Live Link'],
+            viewWork: 'https://www.behance.net/gallery/239318469/TechVAR-Solutions-(E-comerce-Website)',
+            liveLink: 'https://universal-tech.com/',
+
             color: 'from-[#1a4d6d]/40 to-[#0a2d4d]/40',
             borderColor: 'border-[#79B7FA]/20',
         },
@@ -78,6 +81,8 @@ export default function RecentWork() {
             title: '',
             subtitle: 'AI-Powered Personalized Travel Itinerary Mobile App',
             tags: ['View Work', 'Coming Soon'],
+            viewWork: 'https://www.behance.net/gallery/233603537/AI-Powered-Travel-Assistance-Mobile-App',
+            liveLink: '/coming-soon',
             color: 'from-[#8b5a3c]/40 to-[#5a3a2a]/40',
             borderColor: 'border-[#ff8c42]/20',
         },
@@ -89,6 +94,8 @@ export default function RecentWork() {
             title: '',
             subtitle: 'Teach AI is a Custom GPT-Powered Learning Hub for Concepts',
             tags: ['View Work', 'Live Link'],
+            viewWork: 'https://www.behance.net/gallery/242968471/Taught-AI-(AI-Powered-Educational-Website)',
+            liveLink: 'https://taughtai.app/',
             color: 'from-[#6b6b6b]/40 to-[#4a4a4a]/40',
             borderColor: 'border-[#d4d4d4]/20',
         },
@@ -100,6 +107,8 @@ export default function RecentWork() {
             title: '',
             subtitle: 'Guided Meditation Website for Daily Calm & Mental Wellness',
             tags: ['View Project','Coming Soon'],
+            viewWork: 'https://www.behance.net/gallery/247136261/Mind-Flow-Meditation-Website',
+            liveLink: '/coming-soon',
             color: 'from-[#1a4d6d]/40 to-[#0a2d4d]/40',
             borderColor: 'border-[#79B7FA]/20',
         },
@@ -166,16 +175,16 @@ export default function RecentWork() {
 
                                     {/* CTA */}
                                     <div className='flex gap-4'>
-                                        <div className="flex items-center gap-2 text-blue-400 bg-linear-to-r from-[#0A427D]/50 via-[#06294D]/50 to-[#0A427D]/50 font-semibold group-hover:gap-3 transition-all cursor-pointer w-fit px-4 py-2 rounded-full border border-[#439BF9]">
+                                        <a href={project.viewWork} target='_blank' className="flex items-center gap-2 text-blue-400 bg-linear-to-r from-[#0A427D]/50 via-[#06294D]/50 to-[#0A427D]/50 font-semibold group-hover:gap-3 transition-all cursor-pointer w-fit px-4 py-2 rounded-full border border-[#439BF9]">
                                             <span className="text-sm">{project.tags[0]}</span>
 
 
-                                        </div>
-                                        <div className="flex items-center gap-2 text-blue-400 bg-[#11434366] font-semibold group-hover:gap-3 transition-all cursor-pointer w-fit px-4 py-2 rounded-full border border-[#40C6DA]">
+                                        </a>
+                                        <a href={project.liveLink} target='_blank' className="flex items-center gap-2 text-blue-400 bg-[#11434366] font-semibold group-hover:gap-3 transition-all cursor-pointer w-fit px-4 py-2 rounded-full border border-[#40C6DA]">
                                             <span className="text-sm text-[#97EAEA]">{project.tags[1]}</span>
 
 
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
 

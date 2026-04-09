@@ -13,7 +13,7 @@ export default function Banner() {
     const tags = ["UX/UI", "Website", "Mobile App", "Dashboard", "Responsive Design", "Design System", "Visual Design"];
     return (
         <section className="relative ">
-            {/* Background Image */}
+            
 
             {/* Decorative Circle */}
 
